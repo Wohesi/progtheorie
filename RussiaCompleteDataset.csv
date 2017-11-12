@@ -1,0 +1,495 @@
+federal_subjects_russiaLabel,borderLabel
+Krasnodar Krai,Rostov Oblast
+Krasnodar Krai,Republic of Adygea
+Krasnodar Krai,Stavropol Krai
+Krasnodar Krai,Karachay-Cherkess Republic
+Krasnodar Krai,Autonomous Republic of Crimea
+Krasnodar Krai,Republic of Crimea
+Primorsky Krai,Khabarovsk Krai
+Primorsky Krai,Heilongjiang
+Primorsky Krai,Jilin
+Primorsky Krai,Rason
+Stavropol Krai,Rostov Oblast
+Stavropol Krai,Krasnodar Krai
+Stavropol Krai,Republic of Kalmykia
+Stavropol Krai,Republic of Dagestan
+Stavropol Krai,Chechen Republic
+Stavropol Krai,Republic of North Ossetia-Alania
+Stavropol Krai,Kabardino-Balkar Republic
+Stavropol Krai,Karachay-Cherkess Republic
+Perm Krai,Komi Republic
+Perm Krai,Kirov Oblast
+Perm Krai,Udmurt Republic
+Perm Krai,Sverdlovsk Oblast
+Perm Krai,Republic of Bashkortostan
+Perm Krai,Yanaulsky District
+Perm Krai,Askinsky District
+Perm Krai,Tatyshlinsky District
+Altai Krai,Novosibirsk Oblast
+Altai Krai,Altai Republic
+Altai Krai,Kemerovo Oblast
+Altai Krai,East Kazakhstan Region
+Altai Krai,Pavlodar Province
+Krasnoyarsk Krai,Tuva Republic
+Krasnoyarsk Krai,Tyumen Oblast
+Krasnoyarsk Krai,Tomsk Oblast
+Krasnoyarsk Krai,Kemerovo Oblast
+Krasnoyarsk Krai,Khanty-Mansi Autonomous Okrug
+Krasnoyarsk Krai,Yamalo-Nenets Autonomous Okrug
+Krasnoyarsk Krai,Republic of Khakassia
+Krasnoyarsk Krai,Irkutsk Oblast
+Krasnoyarsk Krai,Sakha Republic
+Zabaykalsky Krai,Irkutsk Oblast
+Zabaykalsky Krai,Sakha Republic
+Zabaykalsky Krai,Buryat Republic
+Zabaykalsky Krai,Amur Oblast
+Zabaykalsky Krai,Inner Mongolia
+Zabaykalsky Krai,Dornod Province
+Zabaykalsky Krai,Selenge Province
+Zabaykalsky Krai,Khentii Province
+Khabarovsk Krai,Primorsky Krai
+Khabarovsk Krai,Sakha Republic
+Khabarovsk Krai,Amur Oblast
+Khabarovsk Krai,Jewish Autonomous Oblast
+Khabarovsk Krai,Sakhalin Oblast
+Khabarovsk Krai,Magadan Oblast
+Khabarovsk Krai,Heilongjiang
+Kamchatka Krai,Sakhalin Oblast
+Kamchatka Krai,Magadan Oblast
+Kamchatka Krai,Chukotka Autonomous Okrug
+Tuva Republic,Altai Republic
+Tuva Republic,Republic of Khakassia
+Tuva Republic,Krasnoyarsk Krai
+Tuva Republic,Irkutsk Oblast
+Tuva Republic,Buryat Republic
+Tuva Republic,Zavkhan Province
+Tuva Republic,Bayan-Ölgii Province
+Tuva Republic,Uvs Province
+Tuva Republic,Khövsgöl Province
+Republic of Karelia,Murmansk Oblast
+Republic of Karelia,Arkhangelsk Oblast
+Republic of Karelia,Vologda Oblast
+Republic of Karelia,Leningrad Oblast
+Republic of Karelia,South Karelia
+Republic of Karelia,Kainuu
+Republic of Karelia,Lapland
+Republic of Karelia,North Karelia
+Republic of Karelia,Northern Ostrobothnia
+Komi Republic,Arkhangelsk Oblast
+Komi Republic,Nenets Autonomous Okrug
+Komi Republic,Kirov Oblast
+Komi Republic,Perm Krai
+Komi Republic,Sverdlovsk Oblast
+Komi Republic,Tyumen Oblast
+Komi Republic,Khanty-Mansi Autonomous Okrug
+Komi Republic,Yamalo-Nenets Autonomous Okrug
+Republic of Adygea,Krasnodar Krai
+Republic of Kalmykia,Rostov Oblast
+Republic of Kalmykia,Volgograd Oblast
+Republic of Kalmykia,Astrakhan Oblast
+Republic of Kalmykia,Republic of Dagestan
+Republic of Kalmykia,Stavropol Krai
+Republic of Dagestan,Republic of Kalmykia
+Republic of Dagestan,Chechen Republic
+Republic of Dagestan,Stavropol Krai
+Chechen Republic,Republic of Dagestan
+Chechen Republic,Stavropol Krai
+Chechen Republic,Republic of Ingushetia
+Chechen Republic,Republic of North Ossetia-Alania
+Republic of Ingushetia,Chechen Republic
+Republic of Ingushetia,Republic of North Ossetia-Alania
+Republic of North Ossetia-Alania,Chechen Republic
+Republic of North Ossetia-Alania,Stavropol Krai
+Republic of North Ossetia-Alania,Republic of Ingushetia
+Republic of North Ossetia-Alania,Kabardino-Balkar Republic
+Kabardino-Balkar Republic,Stavropol Krai
+Kabardino-Balkar Republic,Republic of North Ossetia-Alania
+Kabardino-Balkar Republic,Karachay-Cherkess Republic
+Karachay-Cherkess Republic,Krasnodar Krai
+Karachay-Cherkess Republic,Stavropol Krai
+Karachay-Cherkess Republic,Kabardino-Balkar Republic
+Republic of Mordovia,Nizhny Novgorod Oblast
+Republic of Mordovia,Ryazan Oblast
+Republic of Mordovia,Chuvash Republic
+Republic of Mordovia,Penza Oblast
+Republic of Mordovia,Ulyanovsk Oblast
+Udmurt Republic,Kirov Oblast
+Udmurt Republic,Perm Krai
+Udmurt Republic,Republic of Tatarstan
+Udmurt Republic,Republic of Bashkortostan
+Udmurt Republic,Yanaulsky District
+Mari El Republic,Nizhny Novgorod Oblast
+Mari El Republic,Kirov Oblast
+Mari El Republic,Chuvash Republic
+Mari El Republic,Republic of Tatarstan
+Chuvash Republic,Nizhny Novgorod Oblast
+Chuvash Republic,Republic of Mordovia
+Chuvash Republic,Mari El Republic
+Chuvash Republic,Republic of Tatarstan
+Chuvash Republic,Ulyanovsk Oblast
+Republic of Tatarstan,Samara Oblast
+Republic of Tatarstan,Orenburg Oblast
+Republic of Tatarstan,Kirov Oblast
+Republic of Tatarstan,Udmurt Republic
+Republic of Tatarstan,Mari El Republic
+Republic of Tatarstan,Chuvash Republic
+Republic of Tatarstan,Ulyanovsk Oblast
+Republic of Tatarstan,Republic of Bashkortostan
+Republic of Tatarstan,Bakalinsky District
+Republic of Tatarstan,Tuymazinsky District
+Republic of Bashkortostan,Orenburg Oblast
+Republic of Bashkortostan,Perm Krai
+Republic of Bashkortostan,Udmurt Republic
+Republic of Bashkortostan,Sverdlovsk Oblast
+Republic of Bashkortostan,Republic of Tatarstan
+Republic of Bashkortostan,Chelyabinsk Oblast
+Altai Republic,Tuva Republic
+Altai Republic,Altai Krai
+Altai Republic,Kemerovo Oblast
+Altai Republic,Republic of Khakassia
+Altai Republic,Xinjiang
+Altai Republic,East Kazakhstan Region
+Altai Republic,Bayan-Ölgii Province
+Republic of Khakassia,Tuva Republic
+Republic of Khakassia,Altai Republic
+Republic of Khakassia,Kemerovo Oblast
+Republic of Khakassia,Krasnoyarsk Krai
+Sakha Republic,Krasnoyarsk Krai
+Sakha Republic,Irkutsk Oblast
+Sakha Republic,Zabaykalsky Krai
+Moscow Oblast,Moscow
+Moscow Oblast,Tver Oblast
+Moscow Oblast,Smolensk Oblast
+Moscow Oblast,Yaroslavl Oblast
+Moscow Oblast,Vladimir Oblast
+Moscow Oblast,Ryazan Oblast
+Moscow Oblast,Tula Oblast
+Moscow Oblast,Kaluga Oblast
+Moscow Oblast,Central Volga Krai
+Samara Oblast,Voronezh Oblast
+Samara Oblast,Saratov Oblast
+Samara Oblast,Orenburg Oblast
+Samara Oblast,Republic of Tatarstan
+Samara Oblast,Ulyanovsk Oblast
+Samara Oblast,Tatar Autonomous Soviet Socialist Republic
+Murmansk Oblast,Arkhangelsk Oblast
+Murmansk Oblast,Republic of Karelia
+Murmansk Oblast,Lapland
+Arkhangelsk Oblast,Murmansk Oblast
+Arkhangelsk Oblast,Republic of Karelia
+Arkhangelsk Oblast,Vologda Oblast
+Arkhangelsk Oblast,Komi Republic
+Arkhangelsk Oblast,Nenets Autonomous Okrug
+Arkhangelsk Oblast,Kirov Oblast
+Vologda Oblast,Arkhangelsk Oblast
+Vologda Oblast,Republic of Karelia
+Vologda Oblast,Leningrad Oblast
+Vologda Oblast,Novgorod Oblast
+Vologda Oblast,Tver Oblast
+Vologda Oblast,Yaroslavl Oblast
+Vologda Oblast,Kostroma Oblast
+Vologda Oblast,Kirov Oblast
+Leningrad Oblast,Saint Petersburg
+Leningrad Oblast,Republic of Karelia
+Leningrad Oblast,Vologda Oblast
+Leningrad Oblast,Pskov Oblast
+Leningrad Oblast,Novgorod Oblast
+Leningrad Oblast,South Karelia
+Leningrad Oblast,Kymenlaakso
+Leningrad Oblast,Ida-Viru County
+Pskov Oblast,Leningrad Oblast
+Pskov Oblast,Novgorod Oblast
+Pskov Oblast,Tver Oblast
+Pskov Oblast,Smolensk Oblast
+Pskov Oblast,Vitebsk Region
+Pskov Oblast,Alūksne municipality
+Novgorod Oblast,Vologda Oblast
+Novgorod Oblast,Leningrad Oblast
+Novgorod Oblast,Pskov Oblast
+Novgorod Oblast,Tver Oblast
+Nizhny Novgorod Oblast,Nizhny Novgorod
+Nizhny Novgorod Oblast,Kostroma Oblast
+Nizhny Novgorod Oblast,Ivanovo Oblast
+Nizhny Novgorod Oblast,Vladimir Oblast
+Nizhny Novgorod Oblast,Ryazan Oblast
+Nizhny Novgorod Oblast,Republic of Mordovia
+Nizhny Novgorod Oblast,Kirov Oblast
+Nizhny Novgorod Oblast,Mari El Republic
+Nizhny Novgorod Oblast,Chuvash Republic
+Tver Oblast,Moscow Oblast
+Tver Oblast,Vologda Oblast
+Tver Oblast,Pskov Oblast
+Tver Oblast,Novgorod Oblast
+Tver Oblast,Smolensk Oblast
+Tver Oblast,Yaroslavl Oblast
+Smolensk Oblast,Moscow Oblast
+Smolensk Oblast,Pskov Oblast
+Smolensk Oblast,Tver Oblast
+Smolensk Oblast,Bryansk Oblast
+Smolensk Oblast,Kaluga Oblast
+Smolensk Oblast,Vitebsk Region
+Smolensk Oblast,Mogilev Region
+Yaroslavl Oblast,Moscow Oblast
+Yaroslavl Oblast,Vologda Oblast
+Yaroslavl Oblast,Tver Oblast
+Yaroslavl Oblast,Kostroma Oblast
+Yaroslavl Oblast,Ivanovo Oblast
+Yaroslavl Oblast,Vladimir Oblast
+Kostroma Oblast,Vologda Oblast
+Kostroma Oblast,Nizhny Novgorod Oblast
+Kostroma Oblast,Yaroslavl Oblast
+Kostroma Oblast,Ivanovo Oblast
+Kostroma Oblast,Kirov Oblast
+Ivanovo Oblast,Nizhny Novgorod Oblast
+Ivanovo Oblast,Yaroslavl Oblast
+Ivanovo Oblast,Kostroma Oblast
+Ivanovo Oblast,Vladimir Oblast
+Vladimir Oblast,Moscow Oblast
+Vladimir Oblast,Nizhny Novgorod Oblast
+Vladimir Oblast,Yaroslavl Oblast
+Vladimir Oblast,Ivanovo Oblast
+Vladimir Oblast,Ryazan Oblast
+Ryazan Oblast,Moscow Oblast
+Ryazan Oblast,Nizhny Novgorod Oblast
+Ryazan Oblast,Vladimir Oblast
+Ryazan Oblast,Tula Oblast
+Ryazan Oblast,Lipetsk Oblast
+Ryazan Oblast,Tambov Oblast
+Ryazan Oblast,Republic of Mordovia
+Ryazan Oblast,Penza Oblast
+Tula Oblast,Moscow Oblast
+Tula Oblast,Ryazan Oblast
+Tula Oblast,Kaluga Oblast
+Tula Oblast,Oryol Oblast
+Tula Oblast,Lipetsk Oblast
+Bryansk Oblast,Smolensk Oblast
+Bryansk Oblast,Kaluga Oblast
+Bryansk Oblast,Oryol Oblast
+Bryansk Oblast,Kursk Oblast
+Bryansk Oblast,Chernihiv Oblast
+Bryansk Oblast,Sumy Oblast
+Bryansk Oblast,Gomel Region
+Bryansk Oblast,Mogilev Region
+Kaluga Oblast,Moscow
+Kaluga Oblast,Moscow Oblast
+Kaluga Oblast,Smolensk Oblast
+Kaluga Oblast,Tula Oblast
+Kaluga Oblast,Bryansk Oblast
+Kaluga Oblast,Oryol Oblast
+Oryol Oblast,Tula Oblast
+Oryol Oblast,Bryansk Oblast
+Oryol Oblast,Kaluga Oblast
+Oryol Oblast,Kursk Oblast
+Oryol Oblast,Lipetsk Oblast
+Kursk Oblast,Bryansk Oblast
+Kursk Oblast,Oryol Oblast
+Kursk Oblast,Belgorod Oblast
+Kursk Oblast,Voronezh Oblast
+Kursk Oblast,Lipetsk Oblast
+Kursk Oblast,Sumy Oblast
+Belgorod Oblast,Kursk Oblast
+Belgorod Oblast,Voronezh Oblast
+Belgorod Oblast,Sumy Oblast
+Belgorod Oblast,Kharkiv Oblast
+Belgorod Oblast,Luhansk Oblast
+Voronezh Oblast,Kursk Oblast
+Voronezh Oblast,Belgorod Oblast
+Voronezh Oblast,Lipetsk Oblast
+Voronezh Oblast,Tambov Oblast
+Voronezh Oblast,Rostov Oblast
+Voronezh Oblast,Volgograd Oblast
+Voronezh Oblast,Saratov Oblast
+Voronezh Oblast,Central Volga Krai
+Voronezh Oblast,Luhansk Oblast
+Lipetsk Oblast,Ryazan Oblast
+Lipetsk Oblast,Tula Oblast
+Lipetsk Oblast,Oryol Oblast
+Lipetsk Oblast,Kursk Oblast
+Lipetsk Oblast,Voronezh Oblast
+Lipetsk Oblast,Tambov Oblast
+Tambov Oblast,Ryazan Oblast
+Tambov Oblast,Voronezh Oblast
+Tambov Oblast,Lipetsk Oblast
+Tambov Oblast,Saratov Oblast
+Tambov Oblast,Penza Oblast
+Rostov Oblast,Voronezh Oblast
+Rostov Oblast,Krasnodar Krai
+Rostov Oblast,Volgograd Oblast
+Rostov Oblast,Republic of Kalmykia
+Rostov Oblast,Stavropol Krai
+Rostov Oblast,Luhansk Oblast
+Rostov Oblast,Donetsk Oblast
+Volgograd Oblast,Voronezh Oblast
+Volgograd Oblast,Rostov Oblast
+Volgograd Oblast,Astrakhan Oblast
+Volgograd Oblast,Republic of Kalmykia
+Volgograd Oblast,Saratov Oblast
+Volgograd Oblast,West Kazakhstan Province
+Astrakhan Oblast,Volgograd Oblast
+Astrakhan Oblast,Republic of Kalmykia
+Astrakhan Oblast,Atyrau Province
+Astrakhan Oblast,West Kazakhstan Province
+Saratov Oblast,Samara Oblast
+Saratov Oblast,Voronezh Oblast
+Saratov Oblast,Tambov Oblast
+Saratov Oblast,Volgograd Oblast
+Saratov Oblast,Orenburg Oblast
+Saratov Oblast,Penza Oblast
+Saratov Oblast,Ulyanovsk Oblast
+Saratov Oblast,West Kazakhstan Province
+Orenburg Oblast,Samara Oblast
+Orenburg Oblast,Saratov Oblast
+Orenburg Oblast,Republic of Tatarstan
+Orenburg Oblast,Republic of Bashkortostan
+Orenburg Oblast,Chelyabinsk Oblast
+Orenburg Oblast,Central Volga Krai
+Orenburg Oblast,Aktobe Region
+Orenburg Oblast,Kostanay Region
+Orenburg Oblast,West Kazakhstan Province
+Orenburg Oblast,Khaybullinsky District
+Orenburg Oblast,Bashkir Autonomous Soviet Socialist Republic
+Orenburg Oblast,"Fyodorovsky District, Republic of Bashkortostan"
+Orenburg Oblast,Bizhbulyaksky District
+Orenburg Oblast,Miyakinsky District
+Kirov Oblast,Arkhangelsk Oblast
+Kirov Oblast,Vologda Oblast
+Kirov Oblast,Komi Republic
+Kirov Oblast,Nizhny Novgorod Oblast
+Kirov Oblast,Kostroma Oblast
+Kirov Oblast,Perm Krai
+Jewish Autonomous Oblast,Amur Oblast
+Jewish Autonomous Oblast,Khabarovsk Krai
+Jewish Autonomous Oblast,Heilongjiang
+Moscow,Moscow Oblast
+Moscow,Kaluga Oblast
+Saint Petersburg,Leningrad Oblast
+Saint Petersburg,Gatchinsky District
+Sevastopol,Autonomous Republic of Crimea
+Sevastopol,Bakhchysarai Raion
+Sevastopol,Republic of Crimea
+Nenets Autonomous Okrug,Arkhangelsk Oblast
+Nenets Autonomous Okrug,Komi Republic
+Nenets Autonomous Okrug,Tyumen Oblast
+Nenets Autonomous Okrug,Yamalo-Nenets Autonomous Okrug
+Khanty-Mansi Autonomous Okrug,Komi Republic
+Khanty-Mansi Autonomous Okrug,Sverdlovsk Oblast
+Khanty-Mansi Autonomous Okrug,Tyumen Oblast
+Khanty-Mansi Autonomous Okrug,Tomsk Oblast
+Khanty-Mansi Autonomous Okrug,Yamalo-Nenets Autonomous Okrug
+Khanty-Mansi Autonomous Okrug,Krasnoyarsk Krai
+Yamalo-Nenets Autonomous Okrug,Komi Republic
+Yamalo-Nenets Autonomous Okrug,Nenets Autonomous Okrug
+Yamalo-Nenets Autonomous Okrug,Khanty-Mansi Autonomous Okrug
+Yamalo-Nenets Autonomous Okrug,Krasnoyarsk Krai
+Chukotka Autonomous Okrug,Alaska
+Chukotka Autonomous Okrug,Sakha Republic
+Chukotka Autonomous Okrug,Kamchatka Krai
+Chukotka Autonomous Okrug,Magadan Oblast
+Sakha Republic,Amur Oblast
+Sakha Republic,Khabarovsk Krai
+Sakha Republic,Magadan Oblast
+Sakha Republic,Chukotka Autonomous Okrug
+Buryat Republic,Tuva Republic
+Buryat Republic,Irkutsk Oblast
+Buryat Republic,Zabaykalsky Krai
+Buryat Republic,Chita Oblast
+Buryat Republic,Bulgan Province
+Buryat Republic,Selenge Province
+Buryat Republic,Khövsgöl Province
+Republic of Crimea,Krasnodar Krai
+Republic of Crimea,Sevastopol
+Kirov Oblast,Udmurt Republic
+Kirov Oblast,Mari El Republic
+Kirov Oblast,Republic of Tatarstan
+Sverdlovsk Oblast,Komi Republic
+Sverdlovsk Oblast,Perm Krai
+Sverdlovsk Oblast,Republic of Bashkortostan
+Sverdlovsk Oblast,Chelyabinsk Oblast
+Sverdlovsk Oblast,Kurgan Oblast
+Sverdlovsk Oblast,Tyumen Oblast
+Sverdlovsk Oblast,Khanty-Mansi Autonomous Okrug
+Sverdlovsk Oblast,Gornozavodsk
+Sverdlovsk Oblast,Belokataysky District
+Sverdlovsk Oblast,Askinsky District
+Sverdlovsk Oblast,Mechetlinsky District
+Penza Oblast,Ryazan Oblast
+Penza Oblast,Tambov Oblast
+Penza Oblast,Saratov Oblast
+Penza Oblast,Republic of Mordovia
+Penza Oblast,Ulyanovsk Oblast
+Ulyanovsk Oblast,Samara Oblast
+Ulyanovsk Oblast,Saratov Oblast
+Ulyanovsk Oblast,Republic of Mordovia
+Ulyanovsk Oblast,Chuvash Republic
+Ulyanovsk Oblast,Republic of Tatarstan
+Ulyanovsk Oblast,Penza Oblast
+Chelyabinsk Oblast,Orenburg Oblast
+Chelyabinsk Oblast,Sverdlovsk Oblast
+Chelyabinsk Oblast,Republic of Bashkortostan
+Chelyabinsk Oblast,Kurgan Oblast
+Chelyabinsk Oblast,Central Volga Krai
+Chelyabinsk Oblast,Belokataysky District
+Chelyabinsk Oblast,Salavatsky District
+Chelyabinsk Oblast,Abzelilovsky District
+Chelyabinsk Oblast,Kostanay Region
+Chelyabinsk Oblast,Iglinsky District
+Chelyabinsk Oblast,Arkhangelsky District
+Chelyabinsk Oblast,Baymaksky District
+Chelyabinsk Oblast,Beloretsky District
+Chelyabinsk Oblast,Kiginsky District
+Chelyabinsk Oblast,Nurimanovsky District
+Kurgan Oblast,Sverdlovsk Oblast
+Kurgan Oblast,Chelyabinsk Oblast
+Kurgan Oblast,Tyumen Oblast
+Kurgan Oblast,North Kazakhstan Province
+Kurgan Oblast,Kostanay Region
+Tyumen Oblast,Komi Republic
+Tyumen Oblast,Nenets Autonomous Okrug
+Tyumen Oblast,Sverdlovsk Oblast
+Tyumen Oblast,Kurgan Oblast
+Tyumen Oblast,Omsk Oblast
+Tyumen Oblast,Tomsk Oblast
+Tyumen Oblast,Khanty-Mansi Autonomous Okrug
+Tyumen Oblast,Krasnoyarsk Krai
+Tyumen Oblast,North Kazakhstan Province
+Omsk Oblast,Tyumen Oblast
+Omsk Oblast,Novosibirsk Oblast
+Omsk Oblast,Tomsk Oblast
+Omsk Oblast,North Kazakhstan Province
+Omsk Oblast,Pavlodar Province
+Novosibirsk Oblast,Omsk Oblast
+Novosibirsk Oblast,Tomsk Oblast
+Novosibirsk Oblast,Altai Krai
+Novosibirsk Oblast,Kemerovo Oblast
+Novosibirsk Oblast,Pavlodar Province
+Tomsk Oblast,Tyumen Oblast
+Tomsk Oblast,Omsk Oblast
+Tomsk Oblast,Novosibirsk Oblast
+Tomsk Oblast,Kemerovo Oblast
+Tomsk Oblast,Khanty-Mansi Autonomous Okrug
+Tomsk Oblast,Krasnoyarsk Krai
+Kemerovo Oblast,Novosibirsk Oblast
+Kemerovo Oblast,Tomsk Oblast
+Kemerovo Oblast,Altai Krai
+Kemerovo Oblast,Altai Republic
+Kemerovo Oblast,Republic of Khakassia
+Kemerovo Oblast,Krasnoyarsk Krai
+Irkutsk Oblast,Tuva Republic
+Irkutsk Oblast,Krasnoyarsk Krai
+Irkutsk Oblast,Sakha Republic
+Irkutsk Oblast,Buryat Republic
+Irkutsk Oblast,Zabaykalsky Krai
+Irkutsk Oblast,Chita Oblast
+Amur Oblast,Sakha Republic
+Amur Oblast,Zabaykalsky Krai
+Amur Oblast,Jewish Autonomous Oblast
+Amur Oblast,Khabarovsk Krai
+Amur Oblast,Heilongjiang
+Amur Oblast,Chita Oblast
+Sakhalin Oblast,Khabarovsk Krai
+Sakhalin Oblast,Kamchatka Krai
+Sakhalin Oblast,Hokkaidō Prefecture
+Magadan Oblast,Sakha Republic
+Magadan Oblast,Khabarovsk Krai
+Magadan Oblast,Kamchatka Krai
+Magadan Oblast,Chukotka Autonomous Okrug
