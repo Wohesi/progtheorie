@@ -7,11 +7,11 @@ SELECT ?federal_subjects_russiaLabel ?borderLabel WHERE {
   {?federal_subjects_russia wdt:P31 wd:Q184122}
   ?border wdt:P47 ?federal_subjects_russia
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
-} 
+}
 
 ——————————
 
-SELECT ?oblastLabel ?kraiLabel ?republicsLabel 
+SELECT ?oblastLabel ?kraiLabel ?republicsLabel
        ?federalCitiesLabel ?autonomousOblastLabel ?autonomousOkrugLabel WHERE {
   #?krai wdt:P31 wd:Q831740.
   #?oblast wdt:P31 wd:Q835714.
@@ -19,9 +19,9 @@ SELECT ?oblastLabel ?kraiLabel ?republicsLabel
   #?federalCities wdt:P31 wd:Q183342
   #?autonomousOblast wdt:P31 wd:Q309166
   #?autonomousOkrug wdt:P31 wd:Q184122
-         
+
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
-} 
+}
 
 ——————————
 
@@ -55,3 +55,16 @@ SELECT DISTINCT ?admDivOfChinaLabel ?borderLabel WHERE {
   ?border wdt:P131 wd:Q148 .
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }
+
+
+——————————
+
+SELECT ?oblastLabel ?borderLabel WHERE {
+  ?oblast wdt:P31 wd:Q3348196.
+  ?border wdt:P47 ?oblast.
+  #?border wdt:P131 wd:Q212.
+  ?border wdt:P131 wd:Q212.
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+}
+
+——————————
