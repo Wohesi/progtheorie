@@ -52,4 +52,4 @@ CN  = country("China", "csv-borders/ChinaCompleteDataset.csv")
 # CN.visualisation()
 
 greedy(UA.cg)
-print(nx.get_node_attributes(UA, 'freq'))
+print(nx.get_node_attributes(UA.cg, 'freq'))
