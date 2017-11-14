@@ -6,7 +6,7 @@ class country:
 
     def __init__(self, name, csvfile):
         #print(csvfile)
-        with open(csvfile) as csvfile:
+        with open(csvfile, encoding="utf8") as csvfile:
             countryFile = csv.reader(csvfile)
             provincePairs = [pair for pair in countryFile]
             print(provincePairs)
@@ -18,11 +18,7 @@ class country:
         #cg.add_nodes_from(csvfile)
 
 
-<<<<<<< HEAD
 UA  = country("Ukraine", "csv-borders/UkraineCompleteDataset.csv")
 USA  = country("United States of America", "csv-borders/USACompleteDataset.csv")
 RU  = country("Russia", "csv-borders/RussiaCompleteDataset.csv")
 CN  = country("China", "csv-borders/ChinaCompleteDataset.csv")
-=======
-Ukraine  = country("Ukraine", "csv-borders/UkraineCompleteDataset.csv")
->>>>>>> e0355c1a3f2c657446d493d993cce3b24abaa8e7
