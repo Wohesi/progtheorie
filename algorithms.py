@@ -16,7 +16,7 @@ class algorithm:
         Returns True if node doens't share a frequency with any of its neighbours.
         '''
         for neighbor in nx.all_neighbors(graph, node):
-            if not pairCheck(graph, node, neighbor):
+            if not algorithm.pairCheck(graph, node, neighbor):
                 return False
         return True
 
@@ -25,7 +25,7 @@ class algorithm:
         Returns True if all nodes don't share a frequency with any of their neighbours.
         '''
         for node in graph.nodes():
-            if not neighborCheck(graph, node):
+            if not algorithm.neighborCheck(graph, node):
                 return False
 
         if None in nx.get_node_attributes(graph, 'freq').values():
@@ -38,5 +38,5 @@ class greedy(algorithm):
     def __init__(self, graph):
         for n in graph.nodes():
             graph.node[n]['freq'] = 1
-            while neighborCheck(graph, n) == False:
+            while algorithm.neighborCheck(graph, n) == False:
                 graph.node[n]['freq'] += 1
