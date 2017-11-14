@@ -18,4 +18,7 @@ class country:
         #cg.add_nodes_from(csvfile)
 
 
-USA  = country("USA", "csv-borders/UkraineCompleteDataset.csv")
+UA  = country("Ukraine", "csv-borders/UkraineCompleteDataset.csv")
+USA  = country("United States of America", "csv-borders/USACompleteDataset.csv")
+RU  = country("Russia", "csv-borders/RussiaCompleteDataset.csv")
+CN  = country("China", "csv-borders/ChinaCompleteDataset.csv")
