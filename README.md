@@ -9,10 +9,11 @@ c) De produktie van zenders wordt in Rusland uiteraard ook door de overheid bere
 
 # TODO List
 - [x] Mappenstructuur maken
-- [ ] Python classes toevoegen
+- [x] Python classes toevoegen
 - [ ] Dsatur algoritme toevoegen
-- [ ] Borders checken
+- [x] Borders checken
 - [ ] Graph inkleuren
+- [ ] Visualisatie in een ambt zetten in de landklasse
 
 ### Developers:
 ----
