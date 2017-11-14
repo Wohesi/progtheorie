@@ -17,7 +17,7 @@ class country:
 
         # adding names and pairs to Graph
         self.cg = nx.Graph()
-        self.cg.add_nodes_from(provinceNames)
+        self.cg.add_nodes_from(provinceNames, freq=None)
         self.cg.add_edges_from(provincePairs)
 
 
