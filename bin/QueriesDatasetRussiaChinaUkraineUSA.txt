@@ -68,3 +68,12 @@ SELECT ?oblastLabel ?borderLabel WHERE {
 }
 
 ——————————
+
+SELECT  ?statesLabel ?borderLabel WHERE {
+  ?states wdt:P31 wd:Q35657.
+  ?border wdt:P47 ?states.
+  ?border wdt:P131 wd:Q30.
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+
+——————————
