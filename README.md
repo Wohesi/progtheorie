@@ -7,6 +7,12 @@ b) Doe hetzelfde voor China, de USA en uiteindelijk voor moedertje Rusland. Hoe 
 
 c) De produktie van zenders wordt in Rusland uiteraard ook door de overheid beregeld. Het is het goedkoper om minder zendertypes te hebben, maar ook om van alle zendertypes ongeveer evenveel te hebben. Probeer voor ieder land met ieder minimumaantal zendertypes te bepalen hoe een evenwichtige verdeling eruit zou zien, en kijk of een inrichting mogelijk is met zo'n verdeling.
 
+# TODO List
+- [ ] Mappenstructuur maken
+- [ ] Python classes toevoegen
+- [ ] Dsatur algoritme toevoegen
+- [ ] Borders checken
+- [ ] Graph inkleuren
 
 ### Developers:
 ----
