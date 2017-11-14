@@ -2,6 +2,8 @@ import csv
 import networkx as nx
 import matplotlib.pyplot as plt
 
+from algorithms import greedy
+
 class country:
 
     cg = nx.Graph()
@@ -20,6 +22,7 @@ class country:
 
 
     def visualisation(self):
+        # TODO Actually colour the graph
         nx.spring_layout(self.cg)
 
         plt.figure(figsize=(15,15))
@@ -47,3 +50,6 @@ UA.visualisation()
 USA.visualisation()
 RU.visualisation()
 CN.visualisation()
+
+greedy(UA)
+print(nx.get_node_attributes(UA, 'freq'))
