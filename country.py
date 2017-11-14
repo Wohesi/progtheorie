@@ -21,9 +21,12 @@ class country:
         self.cg.add_edges_from(provincePairs)
 
 
+
+
     def visualisation(self):
         # TODO Actually colour the graph
         nx.spring_layout(self.cg)
+
 
         plt.figure(figsize=(15,15))
 
@@ -52,4 +55,13 @@ CN  = country("China", "csv-borders/ChinaCompleteDataset.csv")
 # CN.visualisation()
 
 greedy(UA.cg)
-print(nx.get_node_attributes(UA.cg, 'freq'))
+# print(nx.get_node_attributes(UA.cg, 'freq'))
+
+greedy(USA.cg)
+# print(nx.get_node_attributes(USA.cg, 'freq'))
+#
+greedy(RU.cg)
+# print(nx.get_node_attributes(RU.cg, 'freq'))
+#
+greedy(CN.cg)
+# print(nx.get_node_attributes(CN.cg, 'freq'))
