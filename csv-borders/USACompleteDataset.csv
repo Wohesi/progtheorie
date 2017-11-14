@@ -1,112 +1,219 @@
-stateLabel,borderLabel
-Alaska,Washington
-Alabama,Florida
-Alabama,Georgia
-Alabama,Mississippi
-Alabama,Tennessee
-Arkansas,Louisiana
-Arkansas,Missouri
-Arkansas,Mississippi
-Arkansas,Oklahoma
-Arkansas,Tennessee
-Arkansas,Texas
-Arizona,California
-Arizona,Colorado
-Arizona,New Mexico
-Arizona,Nevada
-Arizona,Utah
-California,Hawaii
-California,Nevada
-California,Oregon
-Colorado,Kansas
-Colorado,Nebraska
-Colorado,New Mexico
-Colorado,Oklahoma
-Colorado,Utah
-Colorado,Wyoming
-Connecticut,Massachusetts
-Connecticut,New York
-Connecticut,Rhode Island
-District of Columbia,Maryland
-District of Columbia,Virginia
-Delaware,Maryland
-Delaware,New Jersey
-Delaware,Pennsylvania
-Florida,Georgia
-Georgia,North Carolina
-Georgia,South Carolina
-Georgia,Tennessee
-Iowa,Illinois
-Iowa,Minnesota
-Iowa,Missouri
-Iowa,Nebraska
-Iowa,South Dakota
-Iowa,Wisconsin
-Idaho,Montana
-Idaho,Nevada
-Idaho,Oregon
-Idaho,Utah
-Idaho,Washington
-Idaho,Wyoming
-Illinois,Indiana
-Illinois,Kentucky
-Illinois,Missouri
-Illinois,Wisconsin
-Indiana,Kentucky
-Indiana,Michigan
-Indiana,Ohio
-Kansas,Missouri
-Kansas,Nebraska
-Kansas,Oklahoma
-Kentucky,Missouri
-Kentucky,Ohio
-Kentucky,Tennessee
-Kentucky,Virginia
-Kentucky,West Virginia
-Louisiana,Mississippi
-Louisiana,Texas
-Massachusetts,New Hampshire
-Massachusetts,New York
-Massachusetts,Rhode Island
-Massachusetts,Vermont
-Maryland,Pennsylvania
-Maryland,Virginia
-Maryland,West Virginia
-Maine,New Hampshire
-Michigan,Ohio
-Michigan,Wisconsin
-Minnesota,North Dakota
-Minnesota,South Dakota
-Minnesota,Wisconsin
-Missouri,Nebraska
-Missouri,Oklahoma
-Missouri,Tennessee
-Mississippi,Tennessee
-Montana,North Dakota
-Montana,South Dakota
-Montana,Wyoming
-North Carolina,South Carolina
-North Carolina,Tennessee
-North Carolina,Virginia
-North Dakota,South Dakota
-Nebraska,South Dakota
-Nebraska,Wyoming
-New Hampshire,Vermont
-New Jersey,New York
-New Jersey,Pennsylvania
-New Mexico,Oklahoma
-New Mexico,Texas
-New Mexico,Utah
-Nevada,Oregon
-Nevada,Utah
-New York,Pennsylvania
-New York,Vermont
-Ohio,Pennsylvania
-Ohio,West Virginia
-Oklahoma,Texas
-Oregon,Washington
-Pennsylvania,West Virginia
-South Dakota,Wyoming
-Tennessee,Virginia
-Utah,Wyoming
-Virginia,West Virginia
+statesLabel,borderLabel
+Vermont,New Hampshire
+Vermont,Massachusetts
+New Mexico,Arizona
+New Mexico,Utah
+Minnesota,Michigan
+Wisconsin,Michigan
+Wisconsin,Illinois
+Iowa,Illinois
+Missouri,Illinois
+Kentucky,Illinois
+Minnesota,North Dakota
+Minnesota,South Dakota
+Iowa,South Dakota
+Nebraska,South Dakota
+Nebraska,Wyoming
+New Mexico,Colorado
+Nebraska,Colorado
+Kansas,Colorado
+Oklahoma,Colorado
+Kentucky,Virginia
+Kentucky,West Virginia
+Vermont,New York
+Kentucky,Ohio
+Kentucky,Indiana
+New Mexico,Texas
+Louisiana,Texas
+Arkansas,Texas
+Oklahoma,Texas
+Louisiana,Mississippi
+Arkansas,Mississippi
+Missouri,Tennessee
+Kentucky,Tennessee
+Arkansas,Tennessee
+Oklahoma,New Mexico
+Wisconsin,Minnesota
+Iowa,Minnesota
+Minnesota,Wisconsin
+Iowa,Wisconsin
+Minnesota,Iowa
+Wisconsin,Iowa
+Nebraska,Iowa
+Missouri,Iowa
+Iowa,Nebraska
+Kansas,Nebraska
+Missouri,Nebraska
+Nebraska,Kansas
+Missouri,Kansas
+Oklahoma,Kansas
+Iowa,Missouri
+Nebraska,Missouri
+Kansas,Missouri
+Kentucky,Missouri
+Arkansas,Missouri
+Oklahoma,Missouri
+Arkansas,Louisiana
+Tennessee,Kentucky
+Missouri,Kentucky
+Tennessee,Arkansas
+Missouri,Arkansas
+Louisiana,Arkansas
+Oklahoma,Arkansas
+New Mexico,Oklahoma
+Kansas,Oklahoma
+Missouri,Oklahoma
+Arkansas,Oklahoma
+Arizona,California
+Oregon,California
+Florida,Alabama
+New Hampshire,Maine
+Maine,New Hampshire
+Massachusetts,New Hampshire
+New Hampshire,Massachusetts
+Connecticut,Massachusetts
+Massachusetts,Connecticut
+Alabama,Florida
+California,Arizona
+Utah,Arizona
+California,Oregon
+Idaho,Oregon
+Arizona,Utah
+Wyoming,Utah
+Idaho,Utah
+Illinois,Michigan
+Michigan,Illinois
+South Dakota,North Dakota
+Montana,North Dakota
+North Dakota,South Dakota
+Montana,South Dakota
+Wyoming,South Dakota
+North Dakota,Montana
+South Dakota,Montana
+Wyoming,Montana
+Idaho,Montana
+Utah,Wyoming
+South Dakota,Wyoming
+Montana,Wyoming
+Idaho,Wyoming
+Oregon,Idaho
+Utah,Idaho
+Montana,Idaho
+Wyoming,Idaho
+Oregon,Washington
+Idaho,Washington
+California,Nevada
+Arizona,Nevada
+Oregon,Nevada
+Utah,Nevada
+Idaho,Nevada
+Arizona,Colorado
+Utah,Colorado
+Wyoming,Colorado
+Massachusetts,New York
+Connecticut,New York
+Massachusetts,Rhode Island
+Connecticut,Rhode Island
+Michigan,Ohio
+Michigan,Indiana
+Illinois,Indiana
+Alabama,Georgia
+Florida,Georgia
+Alabama,Mississippi
+Alabama,Tennessee
+Arizona,New Mexico
+Utah,New Mexico
+Michigan,Minnesota
+North Dakota,Minnesota
+South Dakota,Minnesota
+Michigan,Wisconsin
+Illinois,Wisconsin
+Illinois,Iowa
+South Dakota,Iowa
+South Dakota,Nebraska
+Wyoming,Nebraska
+Illinois,Missouri
+Illinois,Kentucky
+New Hampshire,Vermont
+Massachusetts,Vermont
+Nevada,California
+Georgia,Alabama
+Mississippi,Alabama
+Tennessee,Alabama
+New York,Massachusetts
+Rhode Island,Massachusetts
+New York,Connecticut
+Rhode Island,Connecticut
+Georgia,Florida
+Nevada,Arizona
+Colorado,Arizona
+Washington,Oregon
+Nevada,Oregon
+Nevada,Utah
+Colorado,Utah
+Ohio,Michigan
+Indiana,Michigan
+Indiana,Illinois
+Colorado,Wyoming
+Washington,Idaho
+Nevada,Idaho
+West Virginia,Virginia
+Maryland,Virginia
+North Carolina,Virginia
+Tennessee,Virginia
+Virginia,West Virginia
+Maryland,West Virginia
+Ohio,West Virginia
+Pennsylvania,West Virginia
+Pennsylvania,New York
+New Jersey,New York
+Virginia,Maryland
+West Virginia,Maryland
+Delaware,Maryland
+Pennsylvania,Maryland
+Maryland,Delaware
+Pennsylvania,Delaware
+New Jersey,Delaware
+West Virginia,Ohio
+Pennsylvania,Ohio
+Indiana,Ohio
+West Virginia,Pennsylvania
+New York,Pennsylvania
+Maryland,Pennsylvania
+Delaware,Pennsylvania
+Ohio,Pennsylvania
+New Jersey,Pennsylvania
+New York,New Jersey
+Delaware,New Jersey
+Pennsylvania,New Jersey
+Ohio,Indiana
+North Carolina,Georgia
+South Carolina,Georgia
+Tennessee,Georgia
+Virginia,North Carolina
+Georgia,North Carolina
+South Carolina,North Carolina
+Tennessee,North Carolina
+Georgia,South Carolina
+North Carolina,South Carolina
+Tennessee,Mississippi
+Virginia,Tennessee
+Georgia,Tennessee
+North Carolina,Tennessee
+Mississippi,Tennessee
+Colorado,New Mexico
+Texas,New Mexico
+Colorado,Nebraska
+Colorado,Kansas
+Tennessee,Missouri
+Texas,Louisiana
+Mississippi,Louisiana
+Virginia,Kentucky
+West Virginia,Kentucky
+Ohio,Kentucky
+Indiana,Kentucky
+Texas,Arkansas
+Mississippi,Arkansas
+Colorado,Oklahoma
+Texas,Oklahoma
+New York,Vermont
