@@ -46,7 +46,7 @@ class country:
 
 UA  = country("Ukraine", "csv-borders/UkraineCompleteDataset.csv")
 USA  = country("United States of America", "csv-borders/USACompleteDataset.csv")
-RU  = country("Russia", "csv-borders/RussiaCompleteDataset.csv")
+RU  = country("Russia", "csv-borders/NewRussiaCompleteDataset.csv")
 CN  = country("China", "csv-borders/ChinaCompleteDataset.csv")
 
 # UA.visualisation()
@@ -54,14 +54,14 @@ CN  = country("China", "csv-borders/ChinaCompleteDataset.csv")
 # RU.visualisation()
 # CN.visualisation()
 
-greedy(UA.cg)
-# print(nx.get_node_attributes(UA.cg, 'freq'))
+#greedy(UA.cg)
+#print(nx.get_node_attributes(UA.cg, 'freq'))
 
-greedy(USA.cg)
-# print(nx.get_node_attributes(USA.cg, 'freq'))
+#greedy(USA.cg)
+#print(nx.get_node_attributes(USA.cg, 'freq'))
 #
-greedy(RU.cg)
-# print(nx.get_node_attributes(RU.cg, 'freq'))
+#greedy(RU.cg)
+#print(nx.get_node_attributes(RU.cg, 'freq'))
 #
-greedy(CN.cg)
-# print(nx.get_node_attributes(CN.cg, 'freq'))
+#greedy(CN.cg)
+#print(nx.get_node_attributes(CN.cg, 'freq'))
