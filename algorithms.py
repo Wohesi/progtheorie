@@ -59,3 +59,9 @@ class greedyDegreeSorted(algorithm):
             graph.node[n[0]]['freq'] = 1
             while not algorithm.neighborCheck(graph, n[0]):
                 graph.node[n[0]]['freq'] += 1
+
+
+class dSatur(algorithm):
+    '''
+    '''
+    def __init__(self, graph):
