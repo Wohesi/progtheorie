@@ -60,6 +60,13 @@ class greedyDegreeSorted(algorithm):
             while not algorithm.neighborCheck(graph, n[0]):
                 graph.node[n[0]]['freq'] += 1
 
+class greedyAlphabetically(algorithm):
+
+    def __init__(self, graph):
+        for n in sorted(graph.nodes(), key=str.lower, reverse=False):
+            graph.node[n]['freq'] = 1
+            while algorithm.neighborCheck(graph, n) == False:
+                graph.node[n]['freq'] += 1
 
 class dSatur(algorithm):
     '''
