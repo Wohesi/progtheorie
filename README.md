@@ -10,12 +10,12 @@ c) De produktie van zenders wordt in Rusland uiteraard ook door de overheid bere
 # TODO List
 - [x] Mappenstructuur maken
 - [x] Python classes toevoegen
-- [ ] Code omschrijven naar Classes
+- [x] Code omschrijven naar Classes
 - [ ] Dsatur algoritme toevoegen
 - [x] Borders checken
 - [ ] Graph inkleuren
 - [ ] Visualisatie in een ambt zetten in de landklasse
-- [ ] *Het algoritme zodanig aanpassen dat er niet telkens +1 nieuwe kleur bijkomt, 
+- [x] *Het algoritme zodanig aanpassen dat er niet telkens +1 nieuwe kleur bijkomt, 
       maar een kleur die al eerder gebruikt is...*
 
 ### Developers:
