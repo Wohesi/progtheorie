@@ -12,7 +12,7 @@ c) De produktie van zenders wordt in Rusland uiteraard ook door de overheid bere
 - [x] Python classes toevoegen
 - [x] Code omschrijven naar Classes
 - [ ] Experimenteren met het greedy algoritme
-      - [x] Greedy algoritme sorteren op hoogste degree van een node
+- [x] Greedy algoritme sorteren op hoogste degree van een node
 - [ ] Dsatur algoritme toevoegen
 - [x] Borders checken
 - [ ] Graph inkleuren
