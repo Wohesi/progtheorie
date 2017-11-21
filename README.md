@@ -11,14 +11,15 @@ c) De produktie van zenders wordt in Rusland uiteraard ook door de overheid bere
 - [x] Mappenstructuur maken
 - [x] Python classes toevoegen
 - [x] Code omschrijven naar Classes
-- [ ] Experimenteren met het greedy algoritme 
+- [ ] Experimenteren met het greedy algoritme
+      - [x] Greedy algoritme sorteren op hoogste degree van een node
 - [ ] Dsatur algoritme toevoegen
 - [x] Borders checken
 - [ ] Graph inkleuren
 - [ ] Visualisatie in een ambt zetten in de landklasse
-- [x] *Het algoritme zodanig aanpassen dat er niet telkens +1 nieuwe kleur bijkomt, 
+- [x] *Het algoritme zodanig aanpassen dat er niet telkens +1 nieuwe kleur bijkomt,
       maar een kleur die al eerder gebruikt is...*
-      
+
 
 ### Developers:
 ----
