@@ -5,6 +5,7 @@ import numpy as np
 
 from collections import Counter
 from algorithms import greedy
+from algorithms import greedyDegreeSorted
 
 class country:
 
@@ -72,10 +73,16 @@ USA  = country("United States of America", "csv-borders/USACompleteDataset.csv")
 RU  = country("Russia", "csv-borders/NewRussiaCompleteDataset.csv")
 CN  = country("China", "csv-borders/ChinaCompleteDataset.csv")
 
-greedy(UA.cg)
-greedy(USA.cg)
-greedy(RU.cg)
-greedy(CN.cg)
+# greedy(UA.cg)
+# greedy(USA.cg)
+# greedy(RU.cg)
+# greedy(CN.cg)
+
+greedyDegreeSorted(UA.cg)
+greedyDegreeSorted(USA.cg)
+greedyDegreeSorted(RU.cg)
+greedyDegreeSorted(CN.cg)
+
 
 # UA.visualisation()
 # USA.visualisation()

@@ -64,4 +64,4 @@ class greedyDegreeSorted(algorithm):
 class dSatur(algorithm):
     '''
     '''
-    def __init__(self, graph):
+    #def __init__(self, graph):
