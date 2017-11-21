@@ -36,8 +36,10 @@ class algorithm:
 
 
 class greedy(algorithm):
-
     def __init__(self, graph):
+        '''
+        Returns the basic greedy algorithm.
+        '''
         for n in graph.nodes():
             graph.node[n]['freq'] = 1
             while not algorithm.neighborCheck(graph, n):
@@ -46,7 +48,10 @@ class greedy(algorithm):
 
 
 class greedyDegreeSorted(algorithm):
-
+    '''
+    Returns the greedy algorithm based on the highest
+    degree of the graph.
+    '''
     def __init__(self, graph):
         degree = sorted([(n, graph.degree(n)) for n in graph.nodes()], key=lambda x: x[1], reverse = True)
         #print(degree[0])
