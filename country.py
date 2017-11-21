@@ -1,15 +1,19 @@
 import csv
 import networkx as nx
 import matplotlib.pyplot as plt
+import numpy as np
 
+from collections import Counter
 from algorithms import greedy
 
 class country:
 
     cg = nx.Graph()
+    countryName = ""
 
     def __init__(self, name, csvfile):
-        #print(csvfile)
+        self.countryName = name
+
         with open(csvfile, encoding="utf8") as csvfile:
             countryFile = csv.reader(csvfile)
             provincePairs = [pair for pair in countryFile][1:]
@@ -24,16 +28,20 @@ class country:
 
 
     def visualisation(self):
-        # TODO Actually colour the graph
-        nx.spring_layout(self.cg)
+        # c = {1: 'red', 2: 'yellow', 3: 'green', 4: 'cyan',
+        # 5: 'blue', 6: 'magenta', 7: 'orange'}
+        # freqDict = nx.get_node_attributes(self.cg, 'freq')
+        # colorDict = {node: c[node] for node in freqDict}
+        # colors = list(zip(colorDict, colorDict.values()))
 
+        nx.spring_layout(self.cg)
 
         plt.figure(figsize=(15,15))
 
         pos = nx.spring_layout(self.cg)
         nx.draw_networkx_nodes(self.cg, pos,
                                 nodelist=self.cg.nodes(),
-                                node_color="yellow",
+                                node_color='yellow', # change this
                                 alpha=0.4)
         nx.draw_networkx_labels(self.cg, pos,
                                 nodelist=self.cg.nodes(),
@@ -44,24 +52,37 @@ class country:
         plt.axis('off')
         plt.show()
 
+    def distribution(self):
+        freqfreq = Counter(list(nx.get_node_attributes(self.cg, 'freq').values()))
+
+        radioFrequencies = freqfreq.keys()
+        freqFrequencies = freqfreq.values()
+        y_pos = np.arange(len(radioFrequencies))
+
+        plt.bar(y_pos, freqFrequencies, align='center', alpha=0.5)
+        plt.xticks(y_pos, radioFrequencies)
+        plt.ylabel('Frequency')
+        print(self.countryName)
+        plt.title('Frequency of radio frequencies in ' + self.countryName)
+
+        plt.show()
+
 UA  = country("Ukraine", "csv-borders/UkraineCompleteDataset.csv")
 USA  = country("United States of America", "csv-borders/USACompleteDataset.csv")
 RU  = country("Russia", "csv-borders/NewRussiaCompleteDataset.csv")
 CN  = country("China", "csv-borders/ChinaCompleteDataset.csv")
+
+greedy(UA.cg)
+greedy(USA.cg)
+greedy(RU.cg)
+greedy(CN.cg)
 
 # UA.visualisation()
 # USA.visualisation()
 # RU.visualisation()
 # CN.visualisation()
 
-#greedy(UA.cg)
-#print(nx.get_node_attributes(UA.cg, 'freq'))
-
-#greedy(USA.cg)
-#print(nx.get_node_attributes(USA.cg, 'freq'))
-#
-#greedy(RU.cg)
-#print(nx.get_node_attributes(RU.cg, 'freq'))
-#
-#greedy(CN.cg)
-#print(nx.get_node_attributes(CN.cg, 'freq'))
+UA.distribution()
+USA.distribution()
+RU.distribution()
+CN.distribution()
