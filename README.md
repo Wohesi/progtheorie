@@ -13,6 +13,7 @@ c) De produktie van zenders wordt in Rusland uiteraard ook door de overheid bere
 - [x] Code omschrijven naar Classes
 - [ ] Experimenteren met het greedy algoritme
 - [x] Greedy algoritme sorteren op hoogste degree van een node
+- [ ] Greedy algoritme sorteren op het alfabet
 - [ ] Dsatur algoritme toevoegen
 - [x] Borders checken
 - [ ] Graph inkleuren
