@@ -34,6 +34,15 @@ class algorithm:
 
         return True
 
+    def getSaturation(graph, node):
+        '''
+        Returns the saturation (amount of coloured nodes) as an int.
+        '''
+        saturation = 0
+        for neighbor in nx.all_neighbors(graph, node):
+            if graph.node[neighbor]['freq'] != None:
+                saturation += 1
+        return saturation
 
 
 class greedy(algorithm):
@@ -67,8 +76,19 @@ class greedy(algorithm):
             while not algorithm.neighborCheck(graph, n):
                 graph.node[n]['freq'] += 1
 
-# class dSatur(algorithm):
-#     '''
-#
-#     '''
-#     def __init__(self, graph):
+        print(algorithm.graphCheck(graph))
+
+class DSatur(algorithm):
+    def __init__(self, graph):
+        pass
+        '''
+        take node with highest degree
+        colour it
+           v
+        1 take node with highest saturation (most coloured neighbours)
+        2 colour it
+        3 repeat (recursion)
+        '''
+        attrDict = nx.get_node_attributes(graph, 'freq')
+        attrTupl = [(k, attrDict[k], algorithm.getSaturation(graph, k)) for k in attrDict]
+        print(attrTupl)
