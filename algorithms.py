@@ -34,17 +34,6 @@ class algorithm:
 
         return True
 
-    def getSaturation(graph, node):
-        '''
-        Returns the saturation (amount of coloured nodes) as an int.
-        '''
-        saturation = 0
-        for neighbor in nx.all_neighbors(graph, node):
-            if graph.node[neighbor]['freq'] != None:
-                saturation += 1
-        return saturation
-
-
 class greedy(algorithm):
     def __init__(self, graph, sortingType='alphabetical', reverse=False):
         '''
@@ -80,7 +69,6 @@ class greedy(algorithm):
 
 class DSatur(algorithm):
     def __init__(self, graph):
-        pass
         '''
         take node with highest degree
         colour it
@@ -90,5 +78,57 @@ class DSatur(algorithm):
         3 repeat (recursion)
         '''
         attrDict = nx.get_node_attributes(graph, 'freq')
-        attrTupl = [(k, attrDict[k], algorithm.getSaturation(graph, k)) for k in attrDict]
-        print(attrTupl)
+        attrList = [[   k,
+                        attrDict[k],
+                        self.getSaturation(graph, k),
+                        graph.degree(k)] for k in attrDict]
+        sortedList = sorted(attrList, key = lambda x: (x[2], x[3]), reverse=True)
+        # sort by saturation, then by degree in descending order
+        result = self.recursiveColor(graph, sortedList, [])
+
+        print(result)
+
+    def getSaturation(self, graph, node):
+        '''
+        Returns the saturation (amount of coloured nodes) as an int.
+        '''
+        saturation = 0
+        for neighbor in nx.all_neighbors(graph, node):
+            if graph.node[neighbor]['freq'] != None:
+                saturation += 1
+        return saturation
+
+    def recursiveColor(self, graph, nodeList, doneList):
+        '''
+        Takes a graph and a  list of structure [[node, freq, saturation, degree]]
+        and assigns the frequencies.
+        '''
+        # testing
+        print("done: " + str(len(doneList)))
+        print("node: " + str(len(nodeList)))
+        print("")
+        if len(nodeList) != 0:
+            print(nodeList[0][0])
+            print(algorithm.neighborCheck(graph, nodeList[0][0]))
+
+        if nodeList == []:
+            return []
+
+        nodeList[0][1] = 1
+
+        # NEIGHBORCHECK DOES NOT WORK
+        # GRAPH DOESN'T GET UPDATED IN RECURSION
+        # EITHER UPDATE GRAPH IN THIS FUNCTION DYNAMICALLY
+        # OR REWRITE NEIGHBORCHECK FUNCTION (MORE DIFFICULT)
+        while not algorithm.neighborCheck(graph, nodeList[0][0]):
+            nodeList[0][1] += 1
+
+        newDoneList = doneList + [nodeList[0]]
+        # New nodelist without the node that was just assigned a Frequency
+        # and with newly calculated saturations
+        newNodeList = [[    n[0],
+                            n[1],
+                            self.getSaturation(graph, n[0]),
+                            n[3]]  for n in nodeList[1:]]
+
+        return self.recursiveColor(graph, newNodeList, newDoneList)
