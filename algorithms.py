@@ -15,7 +15,6 @@ class algorithm:
         '''
         Returns True if node doens't share a frequency with any of its neighbours.
         '''
-        print([x for x in nx.all_neighbors(graph, node)])
         for neighbor in nx.all_neighbors(graph, node):
             if not algorithm.pairCheck(graph, node, neighbor):
                 return False
@@ -104,9 +103,9 @@ class DSatur(algorithm):
         and assigns the frequencies.
         '''
         # testing
-        print("done: " + str(len(doneList)))
-        print("node: " + str(len(nodeList)))
-        print("")
+        # print("done: " + str(len(doneList)))
+        # print("node: " + str(len(nodeList)))
+        # print("")
         if len(nodeList) != 0:
             print(nodeList[0][0])
 
@@ -116,6 +115,7 @@ class DSatur(algorithm):
 
         # Loop to set colour so it doesn't interfere with neighbours
         nodeList[0][1] = 1
+        graph.node[nodeList[0][0]]['freq'] = 1
         # NEIGHBORCHECK DOES NOT WORK
         # GRAPH DOESN'T GET UPDATED IN RECURSION
         # EITHER UPDATE GRAPH IN THIS FUNCTION DYNAMICALLY
@@ -123,13 +123,12 @@ class DSatur(algorithm):
         print(algorithm.neighborCheck(graph, nodeList[0][0]))
         while not algorithm.neighborCheck(graph, nodeList[0][0]):
             nodeList[0][1] += 1
-            print("looping in progress")
-            print(algorithm.neighborCheck(graph, nodeList[0][0]))
+            graph.node[nodeList[0][0]]['freq'] += 1
 
         # update graph with new Frequency
         # (important for checking neighbours during recursion)
         graph.node[nodeList[0][0]]['freq'] = nodeList[0][1]
-        print(graph.node[nodeList[0][0]]['freq'])
+        # print(graph.node[nodeList[0][0]]['freq'])
 
         # add the newly coloured in node to the donelist
         newDoneList = doneList + [nodeList[0]]
@@ -141,4 +140,5 @@ class DSatur(algorithm):
                             self.getSaturation(graph, n[0]),
                             n[3]]  for n in nodeList[1:]]
 
+        print(newDoneList)
         return self.recursiveColor(graph, newNodeList, newDoneList)
