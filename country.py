@@ -62,8 +62,7 @@ class country:
         plt.bar(y_pos, freqFrequencies, align='center', alpha=0.5)
         plt.xticks(y_pos, radioFrequencies)
         plt.ylabel('Frequency')
-        print(self.countryName)
-        print(freqFrequencies)
+        print(self.countryName, freqFrequencies)
         plt.title('Frequency of radio frequencies in ' + self.countryName)
 
 
