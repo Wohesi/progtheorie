@@ -28,9 +28,11 @@ c) De produktie van zenders wordt in Rusland uiteraard ook door de overheid bere
 - [x] Greedy algoritme sorteren op hoogste degree van een node
 - [x] Greedy algoritme sorteren op het alfabet
 - [ ] Recursie in Dsatur aanpassen
+- [ ] Statespace / bruteforce berekenen
 
 ### Algoritme
 - [ ] Dsatur algoritme toevoegen
+- [ ] Andere algoritmes verkennen
 - [x] *Het algoritme zodanig aanpassen dat er niet telkens +1 nieuwe kleur bijkomt,
       maar een kleur die al eerder gebruikt is...*
 
