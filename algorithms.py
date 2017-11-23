@@ -7,7 +7,6 @@ class algorithm:
         '''
         Returns True if both nodes don't share a radio frequency.
         '''
-        # TODO Deal with None better.
         if graph.node[node1]['freq'] is not None and graph.node[node2]['freq'] is not None and graph.node[node1]['freq'] == graph.node[node2]['freq']:
             return False
         return True
@@ -16,6 +15,7 @@ class algorithm:
         '''
         Returns True if node doens't share a frequency with any of its neighbours.
         '''
+        print([x for x in nx.all_neighbors(graph, node)])
         for neighbor in nx.all_neighbors(graph, node):
             if not algorithm.pairCheck(graph, node, neighbor):
                 return False
@@ -123,15 +123,17 @@ class DSatur(algorithm):
         print(algorithm.neighborCheck(graph, nodeList[0][0]))
         while not algorithm.neighborCheck(graph, nodeList[0][0]):
             nodeList[0][1] += 1
+            print("looping in progress")
             print(algorithm.neighborCheck(graph, nodeList[0][0]))
 
         # update graph with new Frequency
         # (important for checking neighbours during recursion)
         graph.node[nodeList[0][0]]['freq'] = nodeList[0][1]
+        print(graph.node[nodeList[0][0]]['freq'])
 
         # add the newly coloured in node to the donelist
         newDoneList = doneList + [nodeList[0]]
-        
+
         # New nodelist without the node that was just coloured in
         # with newly calculated saturations
         newNodeList = [[    n[0],
