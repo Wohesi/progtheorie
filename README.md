@@ -20,8 +20,8 @@ c) De produktie van zenders wordt in Rusland uiteraard ook door de overheid bere
 - [x] Python classes toevoegen
 - [x] Code omschrijven naar Classes
 - [ ] Classes maken voor algoritmes
-- [ ] Country in aparte class zetten
-- [ ] Main class maken
+- [x] Country in aparte class zetten
+- [x] Main class maken
 
 ### Experimenteren
 - [x] Experimenteren met het greedy algoritme
