@@ -31,6 +31,7 @@ c) De produktie van zenders wordt in Rusland uiteraard ook door de overheid bere
 - [ ] Statespace / bruteforce berekenen
 
 ### Algoritme
+- [x] Alle greedy algoritmes in 1 functie omschrijven
 - [ ] Dsatur algoritme toevoegen
 - [ ] Andere algoritmes verkennen
 - [x] *Het algoritme zodanig aanpassen dat er niet telkens +1 nieuwe kleur bijkomt,
