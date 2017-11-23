@@ -5,9 +5,6 @@ import numpy as np
 
 from collections import Counter
 from algorithms import greedy
-from algorithms import greedyHighDegreeSorted
-from algorithms import greedyLowDegreeSorted
-from algorithms import greedyAlphabetically
 
 class country:
 
@@ -66,41 +63,73 @@ class country:
         plt.xticks(y_pos, radioFrequencies)
         plt.ylabel('Frequency')
         print(self.countryName)
+        print(freqFrequencies)
         plt.title('Frequency of radio frequencies in ' + self.countryName)
 
+
         plt.show()
+UA1  = country("Ukraine", "csv-borders/UkraineCompleteDataset.csv")
+USA1  = country("United States of America", "csv-borders/USACompleteDataset.csv")
+RU1  = country("Russia", "csv-borders/NewRussiaCompleteDataset.csv")
+CN1  = country("China", "csv-borders/ChinaCompleteDataset.csv")
 
-UA  = country("Ukraine", "csv-borders/UkraineCompleteDataset.csv")
-USA  = country("United States of America", "csv-borders/USACompleteDataset.csv")
-RU  = country("Russia", "csv-borders/NewRussiaCompleteDataset.csv")
-CN  = country("China", "csv-borders/ChinaCompleteDataset.csv")
+greedy(UA1.cg, "degree")
+greedy(USA1.cg, "degree")
+greedy(RU1.cg, "degree")
+greedy(CN1.cg, "degree")
 
-# greedy(UA.cg)
-# greedy(USA.cg)
-# greedy(RU.cg)
-# greedy(CN.cg)
+UA2  = country("Ukraine", "csv-borders/UkraineCompleteDataset.csv")
+USA2  = country("United States of America", "csv-borders/USACompleteDataset.csv")
+RU2  = country("Russia", "csv-borders/NewRussiaCompleteDataset.csv")
+CN2  = country("China", "csv-borders/ChinaCompleteDataset.csv")
 
-#greedyAlphabetically(UA.cg)
-#greedyAlphabetically(USA.cg)
-#greedyAlphabetically(RU.cg)
-#greedyAlphabetically(CN.cg)
+greedy(UA2.cg, "degree", True)
+greedy(USA2.cg, "degree", True)
+greedy(RU2.cg, "degree", True)
+greedy(CN2.cg, "degree", True)
 
-greedyHighDegreeSorted(UA.cg)
-greedyHighDegreeSorted(USA.cg)
-greedyHighDegreeSorted(RU.cg)
-greedyHighDegreeSorted(CN.cg)
+UA3  = country("Ukraine", "csv-borders/UkraineCompleteDataset.csv")
+USA3  = country("United States of America", "csv-borders/USACompleteDataset.csv")
+RU3  = country("Russia", "csv-borders/NewRussiaCompleteDataset.csv")
+CN3  = country("China", "csv-borders/ChinaCompleteDataset.csv")
 
-# greedyLowDegreeSorted(UA.cg)
-# greedyLowDegreeSorted(USA.cg)
-# greedyLowDegreeSorted(RU.cg)
-# greedyLowDegreeSorted(CN.cg)
+greedy(UA3.cg, "alphabetical")
+greedy(USA3.cg, "alphabetical")
+greedy(RU3.cg, "alphabetical")
+greedy(CN3.cg, "alphabetical")
+
+UA4  = country("Ukraine", "csv-borders/UkraineCompleteDataset.csv")
+USA4  = country("United States of America", "csv-borders/USACompleteDataset.csv")
+RU4  = country("Russia", "csv-borders/NewRussiaCompleteDataset.csv")
+CN4  = country("China", "csv-borders/ChinaCompleteDataset.csv")
+
+greedy(UA4.cg, "alphabetical", True)
+greedy(USA4.cg, "alphabetical", True)
+greedy(RU4.cg, "alphabetical", True)
+greedy(CN4.cg, "alphabetical", True)
+
 
 # UA.visualisation()
 # USA.visualisation()
 # RU.visualisation()
 # CN.visualisation()
 
-UA.distribution()
-USA.distribution()
-RU.distribution()
-CN.distribution()
+UA1.distribution()
+USA1.distribution()
+RU1.distribution()
+CN1.distribution()
+
+UA2.distribution()
+USA2.distribution()
+RU2.distribution()
+CN2.distribution()
+
+UA3.distribution()
+USA3.distribution()
+RU3.distribution()
+CN3.distribution()
+
+UA4.distribution()
+USA4.distribution()
+RU4.distribution()
+CN4.distribution()
