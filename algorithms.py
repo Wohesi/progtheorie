@@ -109,23 +109,31 @@ class DSatur(algorithm):
         print("")
         if len(nodeList) != 0:
             print(nodeList[0][0])
-            print(algorithm.neighborCheck(graph, nodeList[0][0]))
 
+        # Return if no nodes are left to colour in
         if nodeList == []:
             return []
 
+        # Loop to set colour so it doesn't interfere with neighbours
         nodeList[0][1] = 1
-
         # NEIGHBORCHECK DOES NOT WORK
         # GRAPH DOESN'T GET UPDATED IN RECURSION
         # EITHER UPDATE GRAPH IN THIS FUNCTION DYNAMICALLY
         # OR REWRITE NEIGHBORCHECK FUNCTION (MORE DIFFICULT)
+        print(algorithm.neighborCheck(graph, nodeList[0][0]))
         while not algorithm.neighborCheck(graph, nodeList[0][0]):
             nodeList[0][1] += 1
+            print(algorithm.neighborCheck(graph, nodeList[0][0]))
 
+        # update graph with new Frequency
+        # (important for checking neighbours during recursion)
+        graph.node[nodeList[0][0]]['freq'] = nodeList[0][1]
+
+        # add the newly coloured in node to the donelist
         newDoneList = doneList + [nodeList[0]]
-        # New nodelist without the node that was just assigned a Frequency
-        # and with newly calculated saturations
+        
+        # New nodelist without the node that was just coloured in
+        # with newly calculated saturations
         newNodeList = [[    n[0],
                             n[1],
                             self.getSaturation(graph, n[0]),
