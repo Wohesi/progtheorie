@@ -2,6 +2,7 @@ import networkx as nx
 import matplotlib.pyplot as pyplot
 
 class algorithm:
+
     def pairCheck(graph, node1, node2):
         '''
         Returns True if both nodes don't share a radio frequency.
@@ -82,6 +83,18 @@ class greedyAlphabetically(algorithm):
     '''
     def __init__(self, graph):
         for n in sorted(graph.nodes(), key=str.lower, reverse=False):
+            graph.node[n]['freq'] = 1
+            while algorithm.neighborCheck(graph, n) == False:
+                graph.node[n]['freq'] += 1
+
+
+class greedyReverseAlphabetically(algorithm):
+    '''
+    Returns the greedy algorithm based on
+    an alphabeticaly sorted list
+    '''
+    def __init__(self, graph):
+        for n in sorted(graph.nodes(), key=str.lower, reverse=True):
             graph.node[n]['freq'] = 1
             while algorithm.neighborCheck(graph, n) == False:
                 graph.node[n]['freq'] += 1
