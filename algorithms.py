@@ -102,13 +102,6 @@ class DSatur(algorithm):
         Takes a graph and a  list of structure [[node, freq, saturation, degree]]
         and assigns the frequencies.
         '''
-        # testing
-        # print("done: " + str(len(doneList)))
-        # print("node: " + str(len(nodeList)))
-        # print("")
-        if len(nodeList) != 0:
-            print(nodeList[0][0])
-
         # Return if no nodes are left to colour in
         if nodeList == []:
             return []
@@ -120,7 +113,6 @@ class DSatur(algorithm):
         # GRAPH DOESN'T GET UPDATED IN RECURSION
         # EITHER UPDATE GRAPH IN THIS FUNCTION DYNAMICALLY
         # OR REWRITE NEIGHBORCHECK FUNCTION (MORE DIFFICULT)
-        print(algorithm.neighborCheck(graph, nodeList[0][0]))
         while not algorithm.neighborCheck(graph, nodeList[0][0]):
             nodeList[0][1] += 1
             graph.node[nodeList[0][0]]['freq'] += 1
@@ -140,5 +132,7 @@ class DSatur(algorithm):
                             self.getSaturation(graph, n[0]),
                             n[3]]  for n in nodeList[1:]]
 
-        print(newDoneList)
+        if(algorithm.graphCheck(graph) == True):
+            print("DONE")
+            print(nx.get_node_attributes(graph, 'freq'))
         return self.recursiveColor(graph, newNodeList, newDoneList)
