@@ -22,6 +22,7 @@ c) De produktie van zenders wordt in Rusland uiteraard ook door de overheid bere
 - [ ] Classes maken voor algoritmes
 - [x] Country in aparte class zetten
 - [x] Main class maken
+- [ ] Functie toevoegen aan main.py zodat het makkelijker te gebruiken is
 
 ### Experimenteren
 - [x] Experimenteren met het greedy algoritme

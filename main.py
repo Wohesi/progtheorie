@@ -1,6 +1,10 @@
 from algorithms import greedy
+from algorithms import DSatur
 from country import country
-
+'''
+def main(String dataSetName, String algorithmName):
+    if
+'''
 UA1  = country("Ukraine", "csv-borders/UkraineCompleteDataset.csv")
 # USA1  = country("United States of America", "csv-borders/USACompleteDataset.csv")
 # RU1  = country("Russia", "csv-borders/NewRussiaCompleteDataset.csv")
@@ -45,3 +49,7 @@ UA1.distribution()
 USA2.distribution()
 RU3.distribution()
 CN4.distribution()
+
+
+UA  = country("Ukraine", "csv-borders/UkraineCompleteDataset.csv")
+DSatur(UA.cg)
