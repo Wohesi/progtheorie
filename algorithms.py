@@ -109,18 +109,11 @@ class DSatur(algorithm):
         # Loop to set colour so it doesn't interfere with neighbours
         nodeList[0][1] = 1
         graph.node[nodeList[0][0]]['freq'] = 1
-        # NEIGHBORCHECK DOES NOT WORK
-        # GRAPH DOESN'T GET UPDATED IN RECURSION
-        # EITHER UPDATE GRAPH IN THIS FUNCTION DYNAMICALLY
-        # OR REWRITE NEIGHBORCHECK FUNCTION (MORE DIFFICULT)
+
+        # Update the frequency until it doesn't interfere with neighbours
         while not algorithm.neighborCheck(graph, nodeList[0][0]):
             nodeList[0][1] += 1
             graph.node[nodeList[0][0]]['freq'] += 1
-
-        # update graph with new Frequency
-        # (important for checking neighbours during recursion)
-        graph.node[nodeList[0][0]]['freq'] = nodeList[0][1]
-        # print(graph.node[nodeList[0][0]]['freq'])
 
         # add the newly coloured in node to the donelist
         newDoneList = doneList + [nodeList[0]]
@@ -131,8 +124,6 @@ class DSatur(algorithm):
                             n[1],
                             self.getSaturation(graph, n[0]),
                             n[3]]  for n in nodeList[1:]]
+        newNodeListSorted = sorted(newNodeList, key = lambda x: (x[2], x[3]), reverse=True)
 
-        if(algorithm.graphCheck(graph) == True):
-            print("DONE")
-            print(nx.get_node_attributes(graph, 'freq'))
-        return self.recursiveColor(graph, newNodeList, newDoneList)
+        return self.recursiveColor(graph, newNodeListSorted, newDoneList)
