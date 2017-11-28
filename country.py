@@ -2,9 +2,12 @@ import csv
 import networkx as nx
 import matplotlib.pyplot as plt
 import numpy as np
+import sys
+sys.path.insert(0,'algorithms')
 
 from collections import Counter
-from algorithms import greedy
+#from algorithms import greedy
+import greedy
 
 class country:
 

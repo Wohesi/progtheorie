@@ -1,5 +1,10 @@
-from algorithms import greedy
-from algorithms import DSatur
+import sys
+sys.path.insert(0,'algorithms')
+
+# from algorithms import greedy
+# from algorithms import DSatur
+from greedy import greedy
+from dsatur import DSatur
 from country import country
 '''
 def main(String dataSetName, String algorithmName, ):
