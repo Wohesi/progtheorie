@@ -2,7 +2,7 @@ from algorithms import greedy
 from algorithms import DSatur
 from country import country
 '''
-def main(String dataSetName, String algorithmName):
+def main(String dataSetName, String algorithmName, ):
     if
 
 UA1  = country("Ukraine", "csv-borders/UkraineCompleteDataset.csv")
