@@ -81,8 +81,7 @@ class DSatur(algorithm):
                         attrDict[k],
                         self.getSaturation(graph, k),
                         graph.degree(k)] for k in attrDict]
-                        # TODO alphabetical
-        sortedList = sorted(attrList, key = lambda x: (x[2], x[3]), reverse=True)
+        sortedList = sorted(attrList, key = lambda x: (x[2], x[3], x[0]), reverse=True)
         # sort by saturation, then by degree in descending order
         result = self.recursiveColor(graph, sortedList, [])
 
@@ -125,6 +124,6 @@ class DSatur(algorithm):
                             n[1],
                             self.getSaturation(graph, n[0]),
                             n[3]]  for n in nodeList[1:]]
-        newNodeListSorted = sorted(newNodeList, key = lambda x: (x[2], x[3]), reverse=True)
+        newNodeListSorted = sorted(newNodeList, key = lambda x: (x[2], x[3], x[0]), reverse=True)
 
         return newDoneList + self.recursiveColor(graph, newNodeListSorted, newDoneList)
