@@ -16,7 +16,10 @@ class backtracking(algorithm):
         if graphCheck:
             return []
 
-        currentN['freq'] = 1
+        if currentN['Freq'] == None:
+            currentN = 1
+        else:
+            currentN += 1
 
         neighborCheck(currentN):
 
