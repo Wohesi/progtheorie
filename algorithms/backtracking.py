@@ -13,6 +13,10 @@ class backtracking(algorithm):
         listN:          list of nodes that are checked.
         maxFreq:        maximum amount of frequencies allowed in the graph.
         '''
+        attrDict = nx.get_node_attributes(graph, 'freq')
+        listN = [   n,
+                    attrDict[n],
+                    i for n, i in enumerate(attrDict.keys())]
 
 
     def backTrackColouring(self, graph, currentN, listN, maxFreq)
