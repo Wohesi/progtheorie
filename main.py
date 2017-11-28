@@ -1,11 +1,16 @@
 import sys
 sys.path.insert(0,'algorithms')
+sys.path.insert(0,'bin')
+
 
 # from algorithms import greedy
 # from algorithms import DSatur
 from greedy import greedy
 from dsatur import DSatur
 from country import country
+from oldGreedyAlgorithms import greedyHighDegreeSorted
+from oldGreedyAlgorithms import greedyAlphabetically
+
 '''
 def main(String dataSetName, String algorithmName, ):
     if
@@ -56,18 +61,24 @@ RU3.distribution()
 CN4.distribution()
 '''
 
-UA = country("Ukraine", "csv-borders/UkraineCompleteDataset.csv")
-DSatur(UA.cg)
-USA = country("USA", "csv-borders/USACompleteDataset.csv")
-DSatur(USA.cg)
-RU  = country("Russia", "csv-borders/NewRussiaCompleteDataset.csv")
-DSatur(RU.cg)
-CN = country("China", "csv-borders/ChinaCompleteDataset.csv")
+# UA = country("Ukraine", "csv-borders/UkraineCompleteDataset.csv")
+# DSatur(UA.cg)
+# USA = country("USA", "csv-borders/USACompleteDataset.csv")
+# DSatur(USA.cg)
+# RU  = country("Russia", "csv-borders/NewRussiaCompleteDataset.csv")
+# DSatur(RU.cg)
+CN4 = country("United States of America", "csv-borders/USACompleteDataset.csv")
+greedy(CN4.cg, "degree", True)
+CN2 = country("United States of America", "csv-borders/USACompleteDataset.csv")
+greedy(CN2.cg, "alphabetical")
+CN = country("United States of America", "csv-borders/USACompleteDataset.csv")
 DSatur(CN.cg)
+# UA.distribution()
+# USA.distribution()
+# RU.distribution()
 
-UA.distribution()
-USA.distribution()
-RU.distribution()
+CN4.distribution()
+CN2.distribution()
 CN.distribution()
 
 # UA.visualisation()
