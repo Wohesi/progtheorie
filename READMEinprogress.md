@@ -1,6 +1,10 @@
-# Project Title
+# Radio Russia
 
-One Paragraph of project description goes here
+Verzin een zenderinrichting voor de Oekraïne. Iedere provincie moet een zendertype hebben, geen enkele twee aangrenzende provincies mogen hetzelfde zendertype hebben. Verzin een zenderinrichting voor het hele land, en hoe minder zendertypes je gebruikt, hoe beter.
+
+Doe hetzelfde voor China, de USA en uiteindelijk voor moedertje Rusland. Hoe minder zenderypes, hoe beter.
+
+Probeer voor ieder land met ieder minimumaantal zendertypes te bepalen hoe een evenwichtige verdeling eruit zou zien, en kijk of een inrichting mogelijk is met zo'n verdeling.
 
 ## Getting Started
 
@@ -11,7 +15,9 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-Give examples
+Python 3
+NetorkX
+Matplotlib
 ```
 
 ### Installing
@@ -72,9 +78,11 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Mathijs Parmentier** - *Initial work* - [MathijsPar](https://github.com/MathijsPar)
+* **Iliass Allach** - *Initial work* - [iliassrifie](https://github.com/iliassrifie)
+* **Wout Singerling** - *Initial work* - [Wohesi](https://github.com/Wohesi)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+Zie ook de lijst met [contributors](https://github.com/Wohesi/progtheorie/graphs/contributors) voor de deelnemers van dit project. 
 
 ## License
 
