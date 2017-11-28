@@ -4,7 +4,7 @@ import matplotlib.pyplot as pyplot
 from algorithms import algorithm
 
 class backtracking(algorithm):
-    def __init__(self, graph, currentN, listN, maxFreq):
+    def __init__(self, graph, maxFreq):
         '''
         backtracking algoritme
         parameters:
@@ -13,6 +13,9 @@ class backtracking(algorithm):
         listN:          list of nodes that are checked.
         maxFreq:        maximum amount of frequencies allowed in the graph.
         '''
+
+
+    def backTrackColouring(self, graph, currentN, listN, maxFreq)
         if graphCheck:
             return []
 
