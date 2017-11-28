@@ -17,16 +17,20 @@ class backtracking(algorithm):
             return []
 
         currentN['freq'] = 1
+
         neighborCheck(currentN):
+
         if ! neighborCheck:
+
+            currentN['freq'] + 1 if currentN['freq'] + 1 is not > maxFreq
 
             if currentN['freq'] > maxFreq:
                 backtracking(graph,
                             listN[i-1],
                             listN,
                             maxFreq)
-            
-            backtracking(graph,
-                        listN[i+1],
-                        listN,
-                        maxFreq)
+
+            return [currentN] + backtracking(graph,
+                                            listN[i+1],
+                                            listN,
+                                            maxFreq)
