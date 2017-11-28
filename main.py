@@ -64,3 +64,8 @@ UA.distribution()
 USA.distribution()
 RU.distribution()
 CN.distribution()
+
+# UA.visualisation()
+# USA.visualisation()
+# RU.visualisation()
+# CN.visualisation()
