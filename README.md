@@ -7,7 +7,7 @@ b) Doe hetzelfde voor China, de USA en uiteindelijk voor moedertje Rusland. Hoe 
 
 c) De produktie van zenders wordt in Rusland uiteraard ook door de overheid beregeld. Het is het goedkoper om minder zendertypes te hebben, maar ook om van alle zendertypes ongeveer evenveel te hebben. Probeer voor ieder land met ieder minimumaantal zendertypes te bepalen hoe een evenwichtige verdeling eruit zou zien, en kijk of een inrichting mogelijk is met zo'n verdeling.
 
-# TODO List
+# TODO List:
 
 ### Infrastructuur
 - [x] Mappenstructuur maken
@@ -28,15 +28,14 @@ c) De produktie van zenders wordt in Rusland uiteraard ook door de overheid bere
 - [x] Experimenteren met het greedy algoritme
 - [x] Greedy algoritme sorteren op hoogste degree van een node
 - [x] Greedy algoritme sorteren op het alfabet
-- [ ] Recursie in Dsatur aanpassen
+- [x] Recursie in Dsatur aanpassen
+- [x] Dsatur algoritme sorteren op het alfabet
 - [ ] Statespace / bruteforce berekenen
 
 ### Algoritme
 - [x] Alle greedy algoritmes in 1 functie omschrijven
-- [ ] Dsatur algoritme toevoegen
+- [x] Dsatur algoritme toevoegen
 - [ ] Andere algoritmes verkennen
-- [x] *Het algoritme zodanig aanpassen dat er niet telkens +1 nieuwe kleur bijkomt,
-      maar een kleur die al eerder gebruikt is...*
 
 ### Overige
 - [x] Borders checken
