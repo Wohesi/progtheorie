@@ -35,8 +35,6 @@ c) De produktie van zenders wordt in Rusland uiteraard ook door de overheid bere
 - [x] Alle greedy algoritmes in 1 functie omschrijven
 - [x] Dsatur algoritme toevoegen
 - [ ] Andere algoritmes verkennen
-- [x] *Het algoritme zodanig aanpassen dat er niet telkens +1 nieuwe kleur bijkomt,
-      maar een kleur die al eerder gebruikt is...*
 
 ### Overige
 - [x] Borders checken
