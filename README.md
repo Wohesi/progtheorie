@@ -9,35 +9,20 @@ Probeer voor ieder land met ieder minimumaantal zendertypes te bepalen hoe een e
 # TODO List:
 
 ### Infrastructuur
-- [x] Mappenstructuur maken
 - [ ] Graph inkleuren
 - [ ] Visualisatie in een ambt zetten in de landklasse
-- [ ] .Gitignore toevoegen met bijbehorende files
 - [ ] Map waar visualisaties ingezet worden
 
 ### Datastructuur
-- [x] Python classes toevoegen
-- [x] Code omschrijven naar Classes
-- [ ] Classes maken voor algoritmes
-- [x] Country in aparte class zetten
-- [x] Main class maken
 - [ ] Functie toevoegen aan main.py zodat het makkelijker te gebruiken is
 
 ### Experimenteren
-- [x] Experimenteren met het greedy algoritme
-- [x] Greedy algoritme sorteren op hoogste degree van een node
-- [x] Greedy algoritme sorteren op het alfabet
-- [x] Recursie in Dsatur aanpassen
-- [x] Dsatur algoritme sorteren op het alfabet
 - [ ] Statespace / bruteforce berekenen
 
 ### Algoritme
-- [x] Alle greedy algoritmes in 1 functie omschrijven
-- [x] Dsatur algoritme toevoegen
 - [ ] Andere algoritmes verkennen
 
 ### Overige
-- [x] Borders checken
 - [ ] Readme uitbreiden
 
 ## Getting Started
