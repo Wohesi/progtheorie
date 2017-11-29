@@ -25,11 +25,11 @@ class greedy(algorithm):
         nodeList = []
         if sortingType == 'alphabetical':
             nodeList = sorted(graph.nodes(), key=str.lower, reverse=reverse)
-        elif sortingType == 'degreeAscending':
-            nodeList = sorted([(n, graph.degree(n)) for n in graph.nodes()],
-                                key=lambda x: x[1], reverse=reverse)
+        elif sortingType == 'degree':
+            nodeList = sorted([n for n in graph.nodes()],
+                                key=lambda x:  (graph.degree(x), x), reverse=reverse)
 
-        for n in graph.nodes():
+        for n in nodeList:
             graph.node[n]['freq'] = 1
             while not algorithm.neighborCheck(graph, n):
                 graph.node[n]['freq'] += 1
