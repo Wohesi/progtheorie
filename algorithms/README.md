@@ -1,4 +1,4 @@
-# Algorithms 
+# Algorithms 🤔
 
 Here you'll find three kinds of algorithms. 
 
