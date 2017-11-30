@@ -4,11 +4,78 @@
 
 # Radio Russia
 
+## Opdracht 1
 Verzin een zenderinrichting voor de Oekraïne. Iedere provincie moet een zendertype hebben, geen enkele twee aangrenzende provincies mogen hetzelfde zendertype hebben. Verzin een zenderinrichting voor het hele land, en hoe minder zendertypes je gebruikt, hoe beter.
 
 Doe hetzelfde voor China, de USA en uiteindelijk voor moedertje Rusland. Hoe minder zenderypes, hoe beter.
 
 Probeer voor ieder land met ieder minimumaantal zendertypes te bepalen hoe een evenwichtige verdeling eruit zou zien, en kijk of een inrichting mogelijk is met zo'n verdeling.
+
+## Opdracht 2
+
+Er zijn vier mogelijke kostenschema's bekend geworden. Bekijk voor ieder land welk kostenschema de voordeligste inrichting oplevert.
+
+<table border="1" style="text-align: center;">
+<tbody><tr>
+<th>Zendertype
+</th>
+<th>Kosten 1
+</th>
+<th>Kosten 2
+</th>
+<th>Kosten 3
+</th>
+<th>Kosten 4
+</th></tr>
+<tr>
+<td> A </td>
+<td> 12 </td>
+<td> 19 </td>
+<td> 16 </td>
+<td> 3
+</td></tr>
+<tr>
+<td> B </td>
+<td> 26 </td>
+<td> 20 </td>
+<td> 17 </td>
+<td> 34
+</td></tr>
+<tr>
+<td> C </td>
+<td> 27 </td>
+<td> 21 </td>
+<td> 31 </td>
+<td> 36
+</td></tr>
+<tr>
+<td> D </td>
+<td> 30 </td>
+<td> 23 </td>
+<td> 33 </td>
+<td> 39
+</td></tr>
+<tr>
+<td> E </td>
+<td> 37 </td>
+<td> 36 </td>
+<td> 36 </td>
+<td> 41
+</td></tr>
+<tr>
+<td> F </td>
+<td> 39</td>
+<td> 37 </td>
+<td> 56 </td>
+<td> 43
+</td></tr>
+<tr>
+<td> G </td>
+<td> 41 </td>
+<td> 38 </td>
+<td> 57 </td>
+<td> 58
+</td></tr></tbody></table>
 
 # TODO List:
 
