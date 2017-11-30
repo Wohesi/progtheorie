@@ -86,7 +86,7 @@ Zie ook de lijst met [contributors](https://github.com/Wohesi/progtheorie/graphs
 
 ## Acknowledgments
 
-A lof if inspiration has been drawn from the following book: 
+A lof of inspiration has been drawn from the following book: 
 
 *A Guide to Graph Colouring - Algorithms and Applications by R.M.R. Lewis*
 
