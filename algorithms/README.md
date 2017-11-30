@@ -18,8 +18,8 @@ The greedy algorithm contains four types of sorting.
 
 > for the DSATUR algorithm the choice of which vertex to colour next 
 > is decided heuristically based on the characteristics of the current
-> partial colouring of the graph. This choice is based primarily on the saturation
-> degree of the vertices, defined as follows.
+> partial colouring of the graph. This choice is based firstly on the saturation
+> of the vertices and secondly on the degree of these nodes.
 
 *A Guide to Graph Colouring - Algorithms and Applications, page 39 - by R.M.R. Lewis*
 
@@ -36,6 +36,6 @@ coloured neighbors a node has. This puts them recursively into a priority queue.
 
 *A Guide to Graph Colouring - Algorithms and Applications, page 56 - by R.M.R. Lewis*
 
-Despite this algorithm's incompleteness, there is a fundation based on psudocode inside the 
+Despite this algorithm's incompleteness, there is a fundation based on pseudocode inside the 
 python file. 
 
