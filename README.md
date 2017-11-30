@@ -82,7 +82,11 @@ Zie ook de lijst met [contributors](https://github.com/Wohesi/progtheorie/graphs
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+A lof if inspiration has been drawn from the following book: 
+
+*A Guide to Graph Colouring - Algorithms and Applications by R.M.R. Lewis*
+
+This book allowed us to explore different types of algorithms and it's usage in graphcolouring problems. 
+ 
+
 
