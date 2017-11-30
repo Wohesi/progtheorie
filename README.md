@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.imgur.com/Sgd3iqW.png" alt="radio russia" />
+  <img src="https://i.imgur.com/Sgd3iqW.png" alt="radio russia" height="400" width="400" />
 </p>
 
 # Radio Russia
