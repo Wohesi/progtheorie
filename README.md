@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://i.imgur.com/Sgd3iqW.png" alt="radio russia" />
+</p>
+
 # Radio Russia
 
 Verzin een zenderinrichting voor de Oekraïne. Iedere provincie moet een zendertype hebben, geen enkele twee aangrenzende provincies mogen hetzelfde zendertype hebben. Verzin een zenderinrichting voor het hele land, en hoe minder zendertypes je gebruikt, hoe beter.
