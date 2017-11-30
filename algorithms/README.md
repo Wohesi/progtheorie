@@ -1,7 +1,7 @@
 # Algorithms 
 
 Here you'll find three kinds of algorithms. 
-----
+
 ## Greedy algorithm. 
 
 > In practice, the GREEDY algorithm produces feasible solutions quite quickly;
