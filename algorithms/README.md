@@ -1,6 +1,6 @@
 # Algorithms 🤔
 
-Here you'll find three kinds of algorithms. 
+![comic](https://i0.wp.com/flowingdata.com/wp-content/uploads/2017/05/here_to_help_2x.png?resize=720%2C254&ssl=1)
 
 ## Greedy algorithm. 
 
