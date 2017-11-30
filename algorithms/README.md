@@ -19,7 +19,6 @@ The greedy algorithm contains four types of sorting.
 > is decided heuristically based on the characteristics of the current
 > partial colouring of the graph. This choice is based primarily on the saturation
 > degree of the vertices, defined as follows.
-
 _A Guide to Graph Colouring - Algorithms and Applications, page 39 - by R.M.R. Lewis _ 
 
 The DSatur algorthim is a recursive algorithm. It bases the ordering of a list on the amount of 
@@ -32,6 +31,7 @@ coloured neighbors a node has. This puts them recursively into a priority queue.
 > evidence is gained telling us that there is no way of completing the current partial
 > solution to gain an optimal solution, the algorithm backtracks in order to try to find
 > suitable ways of adjusting the current partial solution
+_A Guide to Graph Colouring - Algorithms and Applications, page 56 - by R.M.R. Lewis _ 
 
 Despite this algorithm's incompleteness, there is a fundation based on psudocode inside the 
 python file. 
