@@ -15,67 +15,15 @@ Probeer voor ieder land met ieder minimumaantal zendertypes te bepalen hoe een e
 
 Er zijn vier mogelijke kostenschema's bekend geworden. Bekijk voor ieder land welk kostenschema de voordeligste inrichting oplevert.
 
-<table border="1" style="text-align: center;">
-<tbody><tr>
-<th>Zendertype
-</th>
-<th>Kosten 1
-</th>
-<th>Kosten 2
-</th>
-<th>Kosten 3
-</th>
-<th>Kosten 4
-</th></tr>
-<tr>
-<td> A </td>
-<td> 12 </td>
-<td> 19 </td>
-<td> 16 </td>
-<td> 3
-</td></tr>
-<tr>
-<td> B </td>
-<td> 26 </td>
-<td> 20 </td>
-<td> 17 </td>
-<td> 34
-</td></tr>
-<tr>
-<td> C </td>
-<td> 27 </td>
-<td> 21 </td>
-<td> 31 </td>
-<td> 36
-</td></tr>
-<tr>
-<td> D </td>
-<td> 30 </td>
-<td> 23 </td>
-<td> 33 </td>
-<td> 39
-</td></tr>
-<tr>
-<td> E </td>
-<td> 37 </td>
-<td> 36 </td>
-<td> 36 </td>
-<td> 41
-</td></tr>
-<tr>
-<td> F </td>
-<td> 39</td>
-<td> 37 </td>
-<td> 56 </td>
-<td> 43
-</td></tr>
-<tr>
-<td> G </td>
-<td> 41 </td>
-<td> 38 </td>
-<td> 57 </td>
-<td> 58
-</td></tr></tbody></table>
+Zendertype | Kosten 1 | Kosten 2 | Kosten 3 | Kosten 4
+------|----|------|---|--
+A | 12 | 19 | 16 | 3
+B | 26 | 20 | 17 | 34
+C | 27 | 21 | 31 | 36
+D | 30 | 23 | 33 | 39
+E | 37 | 36 | 36 | 41
+F | 39 | 37 | 56 | 43
+G | 41 | 38 | 57 | 58
 
 # TODO List:
 
