@@ -1,3 +1,5 @@
+from algorithms import algorithm
+
 class greedyHighDegreeSorted(algorithm):
     '''
     Returns the greedy algorithm based on the highest
