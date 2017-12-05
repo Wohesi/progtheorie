@@ -13,6 +13,7 @@ class country:
 
     cg = nx.Graph()
     countryName = ""
+    algorithmType = None
 
     def __init__(self, name, csvfile):
         self.countryName = name
