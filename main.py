@@ -8,8 +8,6 @@ sys.path.insert(0,'bin')
 from greedy import greedy
 from dsatur import DSatur
 from country import country
-from oldGreedyAlgorithms import greedyHighDegreeSorted
-from oldGreedyAlgorithms import greedyAlphabetically
 
 '''
 def main(String dataSetName, String algorithmName, ):
@@ -67,11 +65,11 @@ CN4.distribution()
 # DSatur(USA.cg)
 # RU  = country("Russia", "csv-borders/NewRussiaCompleteDataset.csv")
 # DSatur(RU.cg)
-CN4 = country("United States of America", "csv-borders/USACompleteDataset.csv")
+CN4 = country("China", "csv-borders/USACompleteDataset.csv")
 greedy(CN4.cg, "degree", True)
-CN2 = country("United States of America", "csv-borders/USACompleteDataset.csv")
+CN2 = country("China", "csv-borders/USACompleteDataset.csv")
 greedy(CN2.cg, "alphabetical")
-CN = country("United States of America", "csv-borders/USACompleteDataset.csv")
+CN = country("China", "csv-borders/USACompleteDataset.csv")
 DSatur(CN.cg)
 # UA.distribution()
 # USA.distribution()
