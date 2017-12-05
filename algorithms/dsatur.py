@@ -4,7 +4,7 @@ import matplotlib.pyplot as pyplot
 from algorithms import algorithm
 
 class DSatur(algorithm):
-    def __init__(self, graph):
+    def __init__(self, country):
         '''
         take node with highest degree
         colour it
@@ -13,6 +13,7 @@ class DSatur(algorithm):
         2 colour it
         3 repeat (recursion)
         '''
+        graph = country.cg
         attrDict = nx.get_node_attributes(graph, 'freq')
         attrList = [[   k,
                         attrDict[k],

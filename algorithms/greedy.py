@@ -4,7 +4,7 @@ import matplotlib.pyplot as pyplot
 from algorithms import algorithm
 
 class greedy(algorithm):
-    def __init__(self, graph, sortingType='alphabetical', reverse=False):
+    def __init__(self, country, sortingType='alphabetical', reverse=False):
         '''
         Assigns frequencies to the graph with a greedy method. The input list
         can be sorted in different ways for different outputs.
@@ -23,6 +23,7 @@ class greedy(algorithm):
         '''
 
         nodeList = []
+        graph = country.cg
         if sortingType == 'alphabetical':
             nodeList = sorted(graph.nodes(), key=str.lower, reverse=reverse)
         elif sortingType == 'degree':
