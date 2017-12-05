@@ -23,7 +23,8 @@ class DSatur(algorithm):
         # sort by saturation, then by degree in descending order
         result = self.recursiveColor(graph, sortedList, [])
 
-        print(result[:10])
+        country.algorithmType = "DSatur"
+        print(country.countryName + " was sorting using the DSatur algorithm!")
 
     def getSaturation(self, graph, node):
         '''

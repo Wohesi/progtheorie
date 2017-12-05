@@ -10,7 +10,7 @@ class greedy(algorithm):
         can be sorted in different ways for different outputs.
 
         Args:
-            graph (networkx graph)      : a networkx graph that is to be
+            country (country object)    : a country object that is to be
                                           processed. Note: the nodes should have
                                           an attribute 'freq' set to None.
             sortingType (string): the type of sorting the method uses.
@@ -35,4 +35,5 @@ class greedy(algorithm):
             while not algorithm.neighborCheck(graph, n):
                 graph.node[n]['freq'] += 1
 
-        print(algorithm.graphCheck(graph))
+        country.algorithmType = "Greedy " + sortingType
+        print(country.countryName + " was sorted using the greedy algorithm!")
