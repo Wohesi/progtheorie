@@ -27,31 +27,3 @@ class country:
         self.cg = nx.Graph()
         self.cg.add_nodes_from(provinceNames, freq=None)
         self.cg.add_edges_from(provincePairs)
-
-
-
-
-    def visualisation(self):
-        # c = {1: 'red', 2: 'yellow', 3: 'green', 4: 'cyan',
-        # 5: 'blue', 6: 'magenta', 7: 'orange'}
-        # freqDict = nx.get_node_attributes(self.cg, 'freq')
-        # colorDict = {node: c[node] for node in freqDict}
-        # colors = list(zip(colorDict, colorDict.values()))
-
-        nx.spring_layout(self.cg)
-
-        plt.figure(figsize=(15,15))
-
-        pos = nx.spring_layout(self.cg)
-        nx.draw_networkx_nodes(self.cg, pos,
-                                nodelist=self.cg.nodes(),
-                                node_color='yellow', # change this
-                                alpha=0.4)
-        nx.draw_networkx_labels(self.cg, pos,
-                                nodelist=self.cg.nodes(),
-                                font_size=14)
-        nx.draw_networkx_edges(self.cg, pos,
-                                edgelist=self.cg.edges(),
-                                edge_color="grey")
-        plt.axis('off')
-        plt.show()
