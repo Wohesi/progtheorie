@@ -31,7 +31,10 @@ class country:
 
     def getLowestCost(self, costScheme):
         '''
-        costScheme : a list of 7 integers
+        Calculates the lowest cost for the given cost scheme. It takes into
+        account all possible permutations of this scheme.
+        Args:
+            costScheme (list) : a list of integers
         '''
         lowestCost = 999999999999999999999999
         optimalScheme = []
@@ -48,14 +51,23 @@ class country:
         print("lowest cost: " + str(lowestCost))
         print("scheme used: " + str(optimalScheme))
         print("")
+
         return lowestCost
 
     def calcCost(self, costScheme):
+        '''
+        Calculates the cost of a single given cost scheme.
+        Args:
+            costScheme (list) : a list of integers
+        '''
         cost = 0
         freqCounts = Counter(nx.get_node_attributes(self.cg, 'freq').values())
 
         for i,c in enumerate(costScheme):
+            # the cost scheme has more frequencies than the country because
+            # our algorithms work well, so we only count it is actually used
             if i+1 in list(freqCounts.keys()):
+                # amount of times the frequency is used * the cost of it
                 cost += freqCounts[i+1] * c
             else:
                 return cost
