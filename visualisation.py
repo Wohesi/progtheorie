@@ -86,11 +86,9 @@ class visualisation:
         plt.show()
 
     def basicInformation(country):
-        print(nx.get_node_attributes(country.cg, ))
-        frequencies = Counter(list(nx.get_node_attributes(country.cg, 'freq')))
+        frequencies = Counter(list(nx.get_node_attributes(country.cg, 'freq').values()))
         std = np.std(list(frequencies.values()))
         amt = len(list(frequencies.keys()))
 
-        print(frequencies)
         print("amount of frequencies: " + str(amt))
         print("standard deviation: " + str(std))
