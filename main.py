@@ -8,6 +8,9 @@ from country import country
 from backtracking import backtracking
 from visualisation import visualisation
 
+import networkx as nx
+
+
 costScheme1 = [12, 26, 27, 30, 37, 39, 41]
 costScheme2 = [19, 20, 21, 23, 36, 37, 38]
 costScheme3 = [16, 17, 31, 33, 36, 56, 57]
@@ -23,7 +26,13 @@ RU = country("Russia", "csv-borders/NewRussiaCompleteDataset.csv")
 # DSatur(CN)
 # DSatur(RU)
 
+<<<<<<< Updated upstream
 # RU.getLowestCost(costScheme1)
+=======
+print(nx.get_node_attributes(RU.cg, 'freq'))
+visualisation.basicInformation(RU)
+RU.getLowestCost(costScheme1)
+>>>>>>> Stashed changes
 # RU.getLowestCost(costScheme2)
 # RU.getLowestCost(costScheme3)
 # RU.getLowestCost(costScheme4)

@@ -32,7 +32,6 @@ class visualisation:
         # arange the values according to the highest amount of frequencies
         ind = np.arange(N)
 
-
         # pad the list with extra 0's for frequencies that don't exist
         # in some lists
         for l in y:
@@ -61,27 +60,37 @@ class visualisation:
 
         plt.show()
 
-        def visualisation(country):
-            # c = {1: 'red', 2: 'yellow', 3: 'green', 4: 'cyan',
-            # 5: 'blue', 6: 'magenta', 7: 'orange'}
-            # freqDict = nx.get_node_attributes(self.cg, 'freq')
-            # colorDict = {node: c[node] for node in freqDict}
-            # colors = list(zip(colorDict, colorDict.values()))
+    def visualisation(country):
+        # c = {1: 'red', 2: 'yellow', 3: 'green', 4: 'cyan',
+        # 5: 'blue', 6: 'magenta', 7: 'orange'}
+        # freqDict = nx.get_node_attributes(self.cg, 'freq')
+        # colorDict = {node: c[node] for node in freqDict}
+        # colors = list(zip(colorDict, colorDict.values()))
 
-            nx.spring_layout(country.cg)
+        nx.spring_layout(country.cg)
 
-            plt.figure(figsize=(15,15))
+        plt.figure(figsize=(15,15))
 
-            pos = nx.spring_layout(country.cg)
-            nx.draw_networkx_nodes(country.cg, pos,
-                                    nodelist=country.cg.nodes(),
-                                    node_color='yellow', # change this
-                                    alpha=0.4)
-            nx.draw_networkx_labels(country.cg, pos,
-                                    nodelist=country.cg.nodes(),
-                                    font_size=14)
-            nx.draw_networkx_edges(country.cg, pos,
-                                    edgelist=country.cg.edges(),
-                                    edge_color="grey")
-            plt.axis('off')
-            plt.show()
+        pos = nx.spring_layout(country.cg)
+        nx.draw_networkx_nodes(country.cg, pos,
+                                nodelist=country.cg.nodes(),
+                                node_color='yellow', # change this
+                                alpha=0.4)
+        nx.draw_networkx_labels(country.cg, pos,
+                                nodelist=country.cg.nodes(),
+                                font_size=14)
+        nx.draw_networkx_edges(country.cg, pos,
+                                edgelist=country.cg.edges(),
+                                edge_color="grey")
+        plt.axis('off')
+        plt.show()
+
+    def basicInformation(country):
+        print(nx.get_node_attributes(country.cg, ))
+        frequencies = Counter(list(nx.get_node_attributes(country.cg, 'freq')))
+        std = np.std(list(frequencies.values()))
+        amt = len(list(frequencies.keys()))
+
+        print(frequencies)
+        print("amount of frequencies: " + str(amt))
+        print("standard deviation: " + str(std))
