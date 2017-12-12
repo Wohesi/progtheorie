@@ -3,47 +3,61 @@ import matplotlib.pyplot as pyplot
 
 from algorithms import algorithm
 
+import sys
+sys.path.insert(0,'algorithms')
+sys.path.insert(0,'bin')
+
 class backtracking(algorithm):
-    def __init__(self, graph, maxFreq):
+
+    def __init__(self, country, maxFreq):
         '''
+        parameters:
+        country:        The country you want to have a frequncy distribution of
+        maxFreq:        the maximum amount of frequencies used
         '''
+        graph = country.cg
         attrDict = nx.get_node_attributes(graph, 'freq')
-        listN = [   n,
-                    attrDict[n],
-                    i for n, i in enumerate(attrDict.keys())]
+        nodeList = [ [i,                                        # id
+                     x,                                         # name
+                     attrDict[x] ]                              # freq
+                     for i,x in enumerate(attrDict.keys())]
+
+        self.backTrackColouring(graph, nodeList[0], nodeList, maxFreq)
 
 
-
-    def backTrackColouring(self, graph, currentN, listN, maxFreq):
+    def backTrackColouring(self, graph, currentN, nodeList, maxFreq):
         '''
         backtracking algoritme
         parameters:
         graph:          the graph you want to colour, and to get algorithm functions.
         currentN:       the current node that is being checked.
-        listN:          list of nodes that are checked.
+        nodeList:          list of nodes that are checked.
         maxFreq:        maximum amount of frequencies allowed in the graph.
         '''
-        if graphCheck:
+        # If there are no interferences in the graph, return an empty list
+        if algorithm.graphCheck:
             return []
 
-        if currentN['Freq'] == None:
-            currentN = 1
-        else:
-            currentN += 1
+        # Adds a frequency to node.
+        if nodeList[0][2] == None:
+            nodeList[0][2] = 1
+        #print(self, graph, currentN, nodeList, maxFreq)
 
-        neighborCheck(currentN):
+        # If neighbours interfere:
+        if not algorithm.neighborCheck(graph, nodeList[0][1]):
+            # Set the frequency + 1, if it's not the maximum Frequency
+            #nodeList[0]['Freq'] + 1 if nodeList[0]['freq'] is not maxFreq
+            if nodeList[0][2] <= maxFreq:
+                nodeList[0][2] += 1
 
-        if not neighborCheck:
-            
-            currentN['freq'] + 1 if currentN['freq'] + 1 is not > maxFreq
-
-            if currentN['freq'] > maxFreq:
+            # If the current frequency is highter than the maximum freq
+            if nodeList[0][2] > maxFreq:
                 backtracking(graph,
-                            listN[i-1],
-                            listN,
+                            nodeList[1:],
+                            nodeList,
                             maxFreq)
 
-            return [currentN] + backtracking(graph,
-                                            listN[i+1],
-                                            listN,
+            return [nodeList[0]] + backTrackColouring(graph,
+                                            currentN -1,
+                                            nodeList,
                                             maxFreq)
