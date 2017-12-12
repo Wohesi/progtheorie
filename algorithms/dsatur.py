@@ -25,6 +25,7 @@ class DSatur(algorithm):
 
         country.algorithmType = "DSatur"
         print(country.countryName + " was sorting using the DSatur algorithm!")
+        print("graphCheck returns " + str(algorithm.graphCheck(graph)))
 
     def getSaturation(self, graph, node):
         '''

@@ -37,3 +37,4 @@ class greedy(algorithm):
 
         country.algorithmType = "Greedy " + sortingType
         print(country.countryName + " was sorted using the greedy algorithm!")
+        print("graphCheck returns " + str(algorithm.graphCheck(graph)))
