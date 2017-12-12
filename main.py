@@ -5,6 +5,7 @@ sys.path.insert(0,'bin')
 from greedy import greedy
 from dsatur import DSatur
 from country import country
+from backtracking import backtracking
 from visualisation import visualisation
 
 costScheme1 = [12, 26, 27, 30, 37, 39, 41]
@@ -17,15 +18,15 @@ USA = country("United States of America", "csv-borders/USACompleteDataset.csv")
 CN = country("China", "csv-borders/ChinaCompleteDataset.csv")
 RU = country("Russia", "csv-borders/NewRussiaCompleteDataset.csv")
 
-greedy(UA, "degree")
-greedy(USA, "alphabetical")
-DSatur(CN)
-DSatur(RU)
+# greedy(UA, "degree")
+# greedy(USA, "alphabetical")
+# DSatur(CN)
+# DSatur(RU)
 
-RU.getLowestCost(costScheme1)
-RU.getLowestCost(costScheme2)
-RU.getLowestCost(costScheme3)
-RU.getLowestCost(costScheme4)
+# RU.getLowestCost(costScheme1)
+# RU.getLowestCost(costScheme2)
+# RU.getLowestCost(costScheme3)
+# RU.getLowestCost(costScheme4)
 # UA1 = country("Ukraine", "csv-borders/UkraineCompleteDataset.csv")
 # UA2 = country("Ukraine", "csv-borders/UkraineCompleteDataset.csv")
 # UA3 = country("Ukraine", "csv-borders/UkraineCompleteDataset.csv")
@@ -35,3 +36,5 @@ RU.getLowestCost(costScheme4)
 # DSatur(UA3)
 #
 # visualisation.distribution([UA1, UA2])
+
+backtracking(USA, 4)
