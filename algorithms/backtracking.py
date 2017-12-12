@@ -35,29 +35,32 @@ class backtracking(algorithm):
         maxFreq:        maximum amount of frequencies allowed in the graph.
         '''
         # If there are no interferences in the graph, return an empty list
-        if algorithm.graphCheck:
-            return []
+        # if algorithm.graphCheck:
+        #     return []
 
         # Adds a frequency to node.
-        if nodeList[0][2] == None:
-            nodeList[0][2] = 1
-        #print(self, graph, currentN, nodeList, maxFreq)
 
-        # If neighbours interfere:
-        if not algorithm.neighborCheck(graph, nodeList[0][1]):
-            # Set the frequency + 1, if it's not the maximum Frequency
-            #nodeList[0]['Freq'] + 1 if nodeList[0]['freq'] is not maxFreq
-            if nodeList[0][2] <= maxFreq:
-                nodeList[0][2] += 1
+        for c in nodeList:
 
-            # If the current frequency is highter than the maximum freq
-            if nodeList[0][2] > maxFreq:
-                backtracking(graph,
-                            nodeList[1:],
-                            nodeList,
-                            maxFreq)
+            if c[2] == None:
+                graph.node[c[1]]['freq'] = 1
 
-            return [nodeList[0]] + backTrackColouring(graph,
-                                            currentN -1,
-                                            nodeList,
-                                            maxFreq)
+            while not algorithm.neighborCheck(graph,c[1]):
+                graph.node[c[1]]['freq'] += 1
+
+                if graph.node[c[1]]['freq'] <= maxFreq:
+                    print ("too high")
+                    return [graph, c[1:], nodeList, maxFreq]
+                print(graph.node[c[1]]['freq'])
+
+                # If the current frequency is highter than the maximum freq
+                # if c[2] > maxFreq:
+                #     backtracking(graph,
+                #                 nodeList[1:],
+                #                 nodeList,
+                #                 maxFreq)
+
+                # return [nodeList[0]] + backTrackColouring(graph,
+                #                                 currentN -1,
+                #                                 nodeList,
+                #                                 maxFreq)
