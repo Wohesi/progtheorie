@@ -15,18 +15,22 @@ class bktrk(algorithm):
         graph = country.cg
         attrDict = nx.get_node_attributes(graph, 'freq')
         attrList = [[x, attrDict[x]] for x in attrDict.keys()]
-        print(self.colorFirst(graph, attrList, maxFreq, 0))
 
-    def colorFirst(self, graph, attrList, maxFreq, n):
+        print(self.colorFirst(graph, attrList, maxFreq))
+
+        country.algorithmType = "Backtracking"
+        print(country.countryName + " was sorting using the backtracking algorithm!")
+        print("graphCheck returns " + str(algorithm.graphCheck(graph)))
+
+
+    def colorFirst(self, graph, nodeList, maxFreq):
         # WILL COLOUR IN THE FIRST NODE OF THE ATTRLIST
 
         # WE CAN STOP IF THE GRAPH IS ALREADY COLOURED IN CORRECTLY
         if algorithm.graphCheck(graph):
-            return attrList
+            return nodeList
 
-        print(n)
-        n += 1
-        newList = copy.deepcopy(attrList)
+        newList = copy.deepcopy(nodeList)
 
         # COLOUR IN THE FIRST NODE
         newList[0][1] = 1
@@ -45,9 +49,9 @@ class bktrk(algorithm):
             graph.node[newList[0][0]]['freq'] = None
 
             newerList = [newList[-1]] + newList[:-1]
-            return self.colorFirst(graph, newerList, maxFreq, n)
+            return self.colorFirst(graph, newerList, maxFreq)
 
         # IF IT DOESN'T EXCEED THE MAXIMUM, WE CAN PROCEED WITH THE NEXT NODE
         else:
             newerList = newList[1:] + [newList[0]]
-            return self.colorFirst(graph, newerList, maxFreq, n)
+            return self.colorFirst(graph, newerList, maxFreq)
