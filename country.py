@@ -55,19 +55,3 @@ class country:
                                 edge_color="grey")
         plt.axis('off')
         plt.show()
-
-    def distribution(self):
-        freqfreq = Counter(list(nx.get_node_attributes(self.cg, 'freq').values()))
-
-        radioFrequencies = freqfreq.keys()
-        freqFrequencies = freqfreq.values()
-        y_pos = np.arange(len(radioFrequencies))
-
-        plt.bar(y_pos, freqFrequencies, align='center', alpha=0.5)
-        plt.xticks(y_pos, radioFrequencies)
-        plt.ylabel('Frequency')
-        print(self.countryName + ": ", freqFrequencies)
-        plt.title('Frequency of radio frequencies in ' + self.countryName)
-
-
-        plt.show()
