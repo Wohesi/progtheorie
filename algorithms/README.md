@@ -29,13 +29,13 @@ coloured neighbors a node has. This puts them recursively into a priority queue.
 ## Backtracking algorithm
 
 > In essence backtracking algorithms work by systematically building up partial 
-> solutionsinto complete solutions. However, during this construction process as soon as
+> solutions into complete solutions. However, during this construction process as soon as
 > evidence is gained telling us that there is no way of completing the current partial
 > solution to gain an optimal solution, the algorithm backtracks in order to try to find
-> suitable ways of adjusting the current partial solution
+> suitable ways of adjusting the current partial solution.
 
 *A Guide to Graph Colouring - Algorithms and Applications, page 56 - by R.M.R. Lewis*
 
-Despite this algorithm's incompleteness, there is a fundation based on pseudocode inside the 
+Despite this algorithm's incompleteness, there is a foundation based on pseudocode inside the 
 python file. 
 
