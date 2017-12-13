@@ -6,7 +6,7 @@ from algorithms import algorithm
 import sys
 sys.path.insert(0,'algorithms')
 sys.path.insert(0,'bin')
-sys.setrecursionlimit(10000)
+sys.setrecursionlimit(4000)
 
 class bktrk(algorithm):
     # MIGHT NOT WORK DUE TO PYTHON RECURSION LIMITS
@@ -16,14 +16,17 @@ class bktrk(algorithm):
         attrDict = nx.get_node_attributes(graph, 'freq')
         attrList = [[x, attrDict[x]] for x in attrDict.keys()]
 
-        print(self.colorFirst2(graph, attrList, maxFreq))
+        print(self.colorFirst(graph, attrList, maxFreq, 0))
 
         country.algorithmType = "Backtracking"
         print(country.countryName + " was sorting using the backtracking algorithm!")
         print("graphCheck returns " + str(algorithm.graphCheck(graph)))
 
 
-    def colorFirst(self, graph, nodeList, maxFreq):
+    def colorFirst(self, graph, nodeList, maxFreq, n):
+        print(n)
+        n += 1
+        print(nodeList[0][0])
         # WILL COLOUR IN THE FIRST NODE OF THE ATTRLIST
 
         # WE CAN STOP IF THE GRAPH IS ALREADY COLOURED IN CORRECTLY
@@ -49,12 +52,12 @@ class bktrk(algorithm):
             graph.node[newList[0][0]]['freq'] = None
 
             newerList = [newList[-1]] + newList[:-1]
-            return self.colorFirst(graph, newerList, maxFreq)
+            return self.colorFirst(graph, newerList, maxFreq, n)
 
         # IF IT DOESN'T EXCEED THE MAXIMUM, WE CAN PROCEED WITH THE NEXT NODE
         else:
             newerList = newList[1:] + [newList[0]]
-            return self.colorFirst(graph, newerList, maxFreq)
+            return self.colorFirst(graph, newerList, maxFreq, n)
 
     def colorFirst2(self, graph, nodeList, maxFreq):
 
