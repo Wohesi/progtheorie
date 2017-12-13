@@ -61,11 +61,15 @@ class visualisation:
         plt.show()
 
     def visualisation(country):
-        # c = {1: 'red', 2: 'yellow', 3: 'green', 4: 'cyan',
-        # 5: 'blue', 6: 'magenta', 7: 'orange'}
-        # freqDict = nx.get_node_attributes(self.cg, 'freq')
-        # colorDict = {node: c[node] for node in freqDict}
-        # colors = list(zip(colorDict, colorDict.values()))
+        c = {1: 'red', 2: 'yellow', 3: 'green', 4: 'cyan',
+             5: 'blue', 6: 'magenta', 7: 'orange'}
+        freqDict = nx.get_node_attributes(country.cg, 'freq')
+        colorDict = {node: c[freqDict[node]] for node in freqDict}
+
+        colors = list(zip(colorDict, colorDict.values()))
+        print (colors)
+        print ([x[0] for x in colors])
+        print ([x[1] for x in colors])
 
         nx.spring_layout(country.cg)
 
@@ -73,12 +77,12 @@ class visualisation:
 
         pos = nx.spring_layout(country.cg)
         nx.draw_networkx_nodes(country.cg, pos,
-                                nodelist=country.cg.nodes(),
-                                node_color='yellow', # change this
-                                alpha=0.4)
+                                nodelist=[x[0] for x in colors],
+                                node_color=[x[1] for x in colors], # change this
+                                alpha=0.8)
         nx.draw_networkx_labels(country.cg, pos,
                                 nodelist=country.cg.nodes(),
-                                font_size=14)
+                                font_size=12)
         nx.draw_networkx_edges(country.cg, pos,
                                 edgelist=country.cg.edges(),
                                 edge_color="grey")
