@@ -56,7 +56,7 @@ class visualisation:
         ax.set_ylabel("Frequency Amount")
         ax.set_xlabel("Frequency Type")
         ax.legend()
-        ax.title("The frequency distribution in %c" %countryList[0].countryName)
+        # ax.title("The frequency distribution in %c" %countryList[0].countryName)
 
         plt.show()
 

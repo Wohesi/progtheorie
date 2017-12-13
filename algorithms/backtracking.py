@@ -22,10 +22,10 @@ class backtracking(algorithm):
                      attrDict[x] ]                              # freq
                      for x in attrDict.keys()]
 
-        self.backTrackColouring(graph, nodeList[0], nodeList, maxFreq)
+        print(self.backTrackColouring(graph, nodeList, 0, maxFreq))
 
 
-    def backTrackColouring(self, graph, currentN, nodeList, maxFreq):
+    def backTrackColouring(self, graph, nodeList, n, maxFreq):
         '''
         backtracking algoritme
         parameters:
@@ -35,36 +35,49 @@ class backtracking(algorithm):
         maxFreq:        maximum amount of frequencies allowed in the graph.
         '''
         # If there are no interferences in the graph, return an empty list
+        if n > len(nodeList):
+            return nodeList
         if algorithm.graphCheck(graph):
-             return []
+            return nodeList
 
-        # Adds a frequency to node.
+        # Adds a frequency to the first node
         if nodeList[0][1] == None:
             nodeList[0][1] = 1
             graph.node[nodeList[0][0]]['freq'] = 1
-
-        while not algorithm.neighborCheck(graph,nodeList[0][0]):
-            print("testje")
+        # if it already has a frequncy (backtracking) sets it to the next one
+        else:
             nodeList[0][1] += 1
             graph.node[nodeList[0][0]]['freq'] += 1
 
-            if graph.node[nodeList[0][0]]['freq'] <= maxFreq:
-                print("hoi")
+        while not algorithm.neighborCheck(graph,nodeList[0][0]):
+            nodeList[0][1] += 1
+            graph.node[nodeList[0][0]]['freq'] += 1
+
+            if graph.node[nodeList[0][0]]['freq'] >= maxFreq:
                 nodeList[0][1] = None
                 graph.node[nodeList[0][0]]['freq'] = None
 
-                newNodeList = [nodeList[-1] ] + nodeList[:-1]
-                return [nodeList[0]] + self.backTrackColouring(graph,
-                            nodeList[-1],
+                newNodeList = [nodeList[-1]] + nodeList[:-1]
+                # return [nodeList[0]] + self.backTrackColouring(graph,
+                #             newNodeList,
+                #             maxFreq)
+                nn = n + 1
+                return self.backTrackColouring(graph,
                             newNodeList,
+                            nn,
                             maxFreq)
 
-        print("goedenavond")
+        
         newNodeList = nodeList[1:] + [nodeList[0]]
-        return [nodeList[0]] + self.backTrackColouring(graph,
-                nodeList[1],
-                newNodeList,
-                maxFreq)
+        # return [nodeList[0]] + self.backTrackColouring(graph,
+        #         newNodeList,
+        #         maxFreq)
+
+        nn = n + 1
+        return self.backTrackColouring(graph,
+                    newNodeList,
+                    nn,
+                    maxFreq)
 
 # Geef een node een frequentie
 # Als twee nodes dezelfde frequentie hebben
