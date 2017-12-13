@@ -61,15 +61,14 @@ class visualisation:
         plt.show()
 
     def visualisation(country):
+
+        # the available colours that can be used to colour in the graph
         c = {1: 'red', 2: 'yellow', 3: 'green', 4: 'cyan',
              5: 'blue', 6: 'magenta', 7: 'orange'}
+
         freqDict = nx.get_node_attributes(country.cg, 'freq')
         colorDict = {node: c[freqDict[node]] for node in freqDict}
-
         colors = list(zip(colorDict, colorDict.values()))
-        print (colors)
-        print ([x[0] for x in colors])
-        print ([x[1] for x in colors])
 
         nx.spring_layout(country.cg)
 
@@ -78,7 +77,7 @@ class visualisation:
         pos = nx.spring_layout(country.cg)
         nx.draw_networkx_nodes(country.cg, pos,
                                 nodelist=[x[0] for x in colors],
-                                node_color=[x[1] for x in colors], # change this
+                                node_color=[x[1] for x in colors],
                                 alpha=0.8)
         nx.draw_networkx_labels(country.cg, pos,
                                 nodelist=country.cg.nodes(),
