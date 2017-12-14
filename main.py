@@ -34,7 +34,8 @@ costScheme4 = [3,  34, 36, 39, 41, 43, 58]
 #
 # # Ukraine visualisation:
 # visualisation.distribution([UAgreedyAlphabetical, UAgreedyDegree, UADSatur, UAbacktracking])
-# visualisation.basicInformation(UA)
+# visualisation.basicInformation(UADSatur)
+# visualisation.visualisation(UADSatur)
 #
 # # Ukraine costscheme
 # UADSatur.getLowestCost(costScheme1)
@@ -59,7 +60,8 @@ costScheme4 = [3,  34, 36, 39, 41, 43, 58]
 #
 # # USA visualisation:
 # visualisation.distribution([USAgreedyAlphabetical, USAgreedyDegree, USADsatur, USAbacktracking])
-# visualisation.basicInformation(USADsatur)
+# visualisation.basicInformation(USADSatur)
+# visualisation.visualisation(USADSatur)
 #
 # # USA costscheme
 # USAgreedyAlphabetical.getLowestCost(costScheme1)
@@ -69,52 +71,54 @@ costScheme4 = [3,  34, 36, 39, 41, 43, 58]
 
 
 
-# # ----- COUNTRY = CHINA -----
-# CN = country("China", "csv-borders/ChinaCompleteDataset.csv")
-# # China Algorithm Parameters
-# CNgreedyAlphabetical = country("China", "csv-borders/ChinaCompleteDataset.csv")
-# CNgreedyDegree = country("China", "csv-borders/ChinaCompleteDataset.csv")
-# CNDSatur = country("China", "csv-borders/ChinaCompleteDataset.csv")
-# CNbacktracking = country("China", "csv-borders/ChinaCompleteDataset.csv")
+# ----- COUNTRY = CHINA -----
+CN = country("China", "csv-borders/ChinaCompleteDataset.csv")
+# China Algorithm Parameters
+CNgreedyAlphabetical = country("China", "csv-borders/ChinaCompleteDataset.csv")
+CNgreedyDegree = country("China", "csv-borders/ChinaCompleteDataset.csv")
+CNDSatur = country("China", "csv-borders/ChinaCompleteDataset.csv")
+CNbacktracking = country("China", "csv-borders/ChinaCompleteDataset.csv")
+
+# China Algorithms:
+greedy(CNgreedyAlphabetical, "alphabetical", True)
+greedy(CNgreedyDegree, "degree")
+DSatur(CNDSatur)
+backtracking(CNbacktracking, 4)
+
+# China visualisation:
+visualisation.distribution([CNgreedyAlphabetical, CNgreedyDegree, CNDSatur, CNbacktracking])
+visualisation.basicInformation(CNDSatur)
+visualisation.visualisation(CNDSatur)
+
+# China costscheme
+CNDSatur.getLowestCost(costScheme1)
+CNDSatur.getLowestCost(costScheme2)
+CNDSatur.getLowestCost(costScheme3)
+CNDSatur.getLowestCost(costScheme4)
+
+
+
+# # ----- COUNTRY = RUSSIA -----
+# RU = country("Russia", "csv-borders/RussiaCompleteDataset.csv")
+# # Russia Algorithm Parameters
+# RUgreedyAlphabetical = country("Russia", "csv-borders/RussiaCompleteDataset.csv")
+# RUgreedyDegree = country("Russia", "csv-borders/RussiaCompleteDataset.csv")
+# RUDsatur = country("Russia", "csv-borders/RussiaCompleteDataset.csv")
+# RUbacktracking = country("Russia", "csv-borders/RussiaCompleteDataset.csv")
 #
-# # China Algorithms:
-# greedy(CNgreedyAlphabetical, "alphabetical", True)
-# greedy(CNgreedyDegree, "degree")
-# DSatur(CNDSatur)
-# backtracking(CNbacktracking, 4)
+# # Russia Algorithms:
+# greedy(RUgreedyAlphabetical, "alphabetical", True)
+# greedy(RUgreedyDegree, "degree")
+# DSatur(RUDsatur)
+# backtracking(RUbacktracking, 4)
 #
-# # China visualisation:
-# visualisation.distribution([CNgreedyAlphabetical, CNgreedyDegree, CNDSatur, CNbacktracking])
-# visualisation.basicInformation(CN)
+# # Russia visualisation:
+# visualisation.distribution([RUgreedyDegree, RUgreedyAlphabetical, RUDsatur, RUbacktracking])
+# visualisation.basicInformation(RUDsatur)
+# visualisation.visualisation(RUDsatur)
 #
-# # China costscheme
-# CNDSatur.getLowestCost(costScheme1)
-# CNDSatur.getLowestCost(costScheme2)
-# CNDSatur.getLowestCost(costScheme3)
-# CNDSatur.getLowestCost(costScheme4)
-
-
-
-# ----- COUNTRY = RUSSIA -----
-RU = country("Russia", "csv-borders/RussiaCompleteDataset.csv")
-# Russia Algorithm Parameters
-RUgreedyAlphabetical = country("Russia", "csv-borders/RussiaCompleteDataset.csv")
-RUgreedyDegree = country("Russia", "csv-borders/RussiaCompleteDataset.csv")
-RUDsatur = country("Russia", "csv-borders/RussiaCompleteDataset.csv")
-RUbacktracking = country("Russia", "csv-borders/RussiaCompleteDataset.csv")
-
-# Russia Algorithms:
-greedy(RUgreedyAlphabetical, "alphabetical", True)
-greedy(RUgreedyDegree, "degree")
-DSatur(RUDsatur)
-backtracking(RUbacktracking, 4)
-
-# Russia visualisation:
-visualisation.distribution([RUgreedyDegree, RUgreedyAlphabetical, RUDsatur, RUbacktracking])
-visualisation.basicInformation(RU)
-
-# Russia costscheme
-RUDsatur.getLowestCost(costScheme1)
-RUDsatur.getLowestCost(costScheme2)
-RUDsatur.getLowestCost(costScheme3)
-RUDsatur.getLowestCost(costScheme4)
+# # Russia costscheme
+# RUDsatur.getLowestCost(costScheme1)
+# RUDsatur.getLowestCost(costScheme2)
+# RUDsatur.getLowestCost(costScheme3)
+# RUDsatur.getLowestCost(costScheme4)
