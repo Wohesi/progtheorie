@@ -25,25 +25,6 @@ E | 37 | 36 | 36 | 41
 F | 39 | 37 | 56 | 43
 G | 41 | 38 | 57 | 58
 
-# TODO List:
-
-### Infrastructuur
-- [ ] Graph inkleuren
-- [ ] Visualisatie in een ambt zetten in de landklasse
-- [ ] Map waar visualisaties ingezet worden
-
-### Datastructuur
-- [ ] Functie toevoegen aan main.py zodat het makkelijker te gebruiken is
-
-### Experimenteren
-- [ ] Statespace / bruteforce berekenen
-
-### Algoritme
-- [ ] Andere algoritmes verkennen
-
-### Overige
-- [ ] Readme uitbreiden
-
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
