@@ -8,7 +8,7 @@ class visualisation:
 
     def distribution(countryList):
         # changeable values
-        colourmap =  ['blue', 'orange', 'green', 'magenta',
+        colourmap =  ['royalblue', 'orange', 'limegreen', 'hotpink',
                     'red', 'cyan', 'yellow']
         barwidth = 0.3 # width of individual bars
 
@@ -64,7 +64,7 @@ class visualisation:
     def visualisation(country):
 
         # the available colours that can be used to colour in the graph
-        c = {1: 'blue', 2: 'orange', 3: 'green', 4: 'magenta',
+        c = {1: 'royalblue', 2: 'orange', 3: 'limegreen', 4: 'hotpink',
              5: 'red', 6: 'cyan', 7: 'yellow'}
 
         freqDict = nx.get_node_attributes(country.cg, 'freq')
@@ -79,13 +79,16 @@ class visualisation:
         nx.draw_networkx_nodes(country.cg, pos,
                                 nodelist=[x[0] for x in colors],
                                 node_color=[x[1] for x in colors],
+                                node_size=600,
                                 alpha=0.8)
         nx.draw_networkx_labels(country.cg, pos,
                                 nodelist=country.cg.nodes(),
                                 font_size=12)
         nx.draw_networkx_edges(country.cg, pos,
                                 edgelist=country.cg.edges(),
-                                edge_color="grey")
+                                edge_color="black",
+                                width=2.0,
+                                alpha=0.8)
         plt.axis('off')
         plt.show()
 
