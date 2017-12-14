@@ -3,6 +3,7 @@ import matplotlib.pyplot as pyplot
 import copy
 
 from algorithms import algorithm
+from dsatur import DSatur
 
 import sys
 sys.path.insert(0,'algorithms')
@@ -16,13 +17,16 @@ class backtracking(algorithm):
         country:        The country you want to have a frequncy distribution of
         maxFreq:        the maximum amount of frequencies used
         '''
-        graph = country.cg
-        attrDict = nx.get_node_attributes(graph, 'freq')
-        nodeList = [ [x,                                         # name
-                     attrDict[x] ]                              # freq
-                     for x in attrDict.keys()]
+        if(True):
+            DSatur(country)
+        else:
+            graph = country.cg
+            attrDict = nx.get_node_attributes(graph, 'freq')
+            nodeList = [ [x,                                         # name
+                         attrDict[x] ]                              # freq
+                         for x in attrDict.keys()]
 
-        print(self.backTrackColouring(graph, nodeList, 0, maxFreq))
+            print(self.backTrackColouring(graph, nodeList, 0, maxFreq))
 
 
     def backTrackColouring(self, graph, nodeList, n, maxFreq):
@@ -67,7 +71,7 @@ class backtracking(algorithm):
                             nn,
                             maxFreq)
 
-        
+
         newNodeList = nodeList[1:] + [nodeList[0]]
         # return [nodeList[0]] + self.backTrackColouring(graph,
         #         newNodeList,
