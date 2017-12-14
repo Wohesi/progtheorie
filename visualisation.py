@@ -8,7 +8,8 @@ class visualisation:
 
     def distribution(countryList):
         # changeable values
-        colourmap =  ['b', 'g', 'r', 'c', 'm', 'y', 'k', 'w']
+        colourmap =  ['blue', 'orange', 'green', 'magenta',
+                    'red', 'cyan', 'yellow']
         barwidth = 0.3 # width of individual bars
 
         # generated values
@@ -63,8 +64,8 @@ class visualisation:
     def visualisation(country):
 
         # the available colours that can be used to colour in the graph
-        c = {1: 'red', 2: 'yellow', 3: 'green', 4: 'cyan',
-             5: 'blue', 6: 'magenta', 7: 'orange'}
+        c = {1: 'blue', 2: 'orange', 3: 'green', 4: 'magenta',
+             5: 'red', 6: 'cyan', 7: 'yellow'}
 
         freqDict = nx.get_node_attributes(country.cg, 'freq')
         colorDict = {node: c[freqDict[node]] for node in freqDict}
