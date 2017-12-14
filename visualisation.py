@@ -85,5 +85,8 @@ class visualisation:
         std = np.std(list(frequencies.values()))
         amt = len(list(frequencies.keys()))
 
+        print("country name: " + country.countryName)
+        print("algorithm type: " + country.algorithmType)
         print("amount of frequencies: " + str(amt))
         print("standard deviation: " + str(std))
+        print("")
