@@ -1,65 +1,59 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
+import itertools
 from collections import Counter
 
 
 class visualisation:
 
     def distribution(countryList):
-        # changeable values
-        colourmap =  ['royalblue', 'orange', 'limegreen', 'hotpink',
-                    'red', 'cyan', 'yellow']
-        barwidth = 0.3 # width of individual bars
 
-        # generated values
-        N = 0           # amount of frequencies
-        x = []          # list of frequencies
-        y = []          # list of frequency amount lists per country
-        a = []          # list of algorithm types (index must be equal to y)
+        # column = algorithm type
+        # row = frequency
+        # data = amount
 
-        # this loop checks which of the graphs has the most frequencies
-        # and adds each distribution to the y-list
+        # the maximum frequency for the chart
+        N = 7
+
+        # initialise an empty pandas DataFrame with the right rows and columns
+        columns = [c.algorithmType for c in countryList]
+        index = list(range(1,8))
+        data = {}
+
         for c in countryList:
-            freqcounts = Counter(list(nx.get_node_attributes(c.cg, 'freq').values()))
+            # construct a sorted tuple list of frequency amounts for each country
+            attrDict = nx.get_node_attributes(c.cg, 'freq')
+            freqCounts = [(k, len(list(g))) for
+                            k,g in
+                            itertools.groupby(sorted(attrDict.values()))]
 
-            radioFrequencies = freqcounts.keys()
-            if len(radioFrequencies) > N:
-                N = len(radioFrequencies)
-                x = list(radioFrequencies)
-            y.append(list(freqcounts.values()))
-            a.append(c.algorithmType)
+            # continue with just the counts
+            freqCounts2 = [x[1] for x in freqCounts]
 
-        # arange the values according to the highest amount of frequencies
-        ind = np.arange(N)
+            # pad the list with extra 0's for frequencies that don't exist
+            if len(freqCounts2) < N:
+                freqCounts2.extend([0] * (N - len(freqCounts2))) # extend the missing amount
 
-        # pad the list with extra 0's for frequencies that don't exist
-        # in some lists
-        for l in y:
-            if len(l) < N:
-                l.extend([0] * (N - len(l))) # extend the missing amount
+            # add list to data dictionary for the right column
+            data[c.algorithmType] = freqCounts2
 
+            print("")
+            print("")
+            print(freqCounts)
+            print("")
+            print("")
 
-        ax = plt.subplot(111)
+        df = pd.DataFrame(data=data, index=index, columns=columns)
 
-        # set up bars for each country
-        for i,g in enumerate(y):
-            ax.bar( ind + (i * barwidth),
-                    g,
-                    barwidth,
-                    align='center',
-                    color=colourmap[i],
-                    label=a[i])
-
-        ax.set_xticks(ind + barwidth)
-        ax.set_xticklabels([x+1 for x in ind])
-
+        ax = df.plot.bar()
+        plt.title(countryList[0].countryName)
         ax.set_ylabel("Frequency Amount")
         ax.set_xlabel("Frequency Type")
-        ax.legend()
-        # ax.title("The frequency distribution in %c" %countryList[0].countryName)
-
         plt.show()
+
+
 
     def visualisation(country):
 
