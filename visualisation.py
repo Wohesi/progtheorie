@@ -41,7 +41,7 @@ class visualisation:
 
         df = pd.DataFrame(data=data, index=index, columns=columns)
 
-        ax = df.plot.bar()
+        ax = df.plot.bar(rot=0)
         plt.title(countryList[0].countryName)
         ax.set_ylabel("Frequency Amount")
         ax.set_xlabel("Frequency Type")
