@@ -113,9 +113,6 @@ images can be seen showing and explaining the results.
 * **Iliass Allach** - *Initial work* - [iliassrifie](https://github.com/iliassrifie)
 * **Wout Singerling** - *Initial work* - [Wohesi](https://github.com/Wohesi)
 
-Zie ook de lijst met [contributors](https://github.com/Wohesi/progtheorie/graphs/contributors) voor de deelnemers van dit project. 
-
-
 ## Acknowledgments
 
 A lof of inspiration has been drawn from the following book: 
