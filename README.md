@@ -4,18 +4,21 @@
 
 # Radio Russia
 
-## Opdracht 1
-Verzin een zenderinrichting voor de Oekraïne. Iedere provincie moet een zendertype hebben, geen enkele twee aangrenzende provincies mogen hetzelfde zendertype hebben. Verzin een zenderinrichting voor het hele land, en hoe minder zendertypes je gebruikt, hoe beter.
+## Assignment 1
 
-Doe hetzelfde voor China, de USA en uiteindelijk voor moedertje Rusland. Hoe minder zenderypes, hoe beter.
+Design a frequency distribution for Ukraine. Every province should have a frequency type. However, two bordering provinces cannot
+share the same frequency type. Design a frequency distribution for the entire country. The less frequency types the better. 
 
-Probeer voor ieder land met ieder minimumaantal zendertypes te bepalen hoe een evenwichtige verdeling eruit zou zien, en kijk of een inrichting mogelijk is met zo'n verdeling.
+Do the same for China, USA and eventually for mother russia.
 
-## Opdracht 2
+Try to design a distribution that is as evenly distributed as possible with the minimum amount of freqnuencies and look if 
+such a design is possble.
 
-Er zijn vier mogelijke kostenschema's bekend geworden. Bekijk voor ieder land welk kostenschema de voordeligste inrichting oplevert.
+## Assignment 2
 
-Zendertype | Kosten 1 | Kosten 2 | Kosten 3 | Kosten 4
+There are four possible costs schemes. Figure out for each country which costs scheme results in the cheapest frequency distribution.
+
+Frequency type | Costs 1 | Costs 2 | Costs 3 | Costs 4
 ------|----|------|---|--
 A | 12 | 19 | 16 | 3
 B | 26 | 20 | 17 | 34
