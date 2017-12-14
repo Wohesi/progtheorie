@@ -82,11 +82,19 @@ class visualisation:
 
     def basicInformation(country):
         frequencies = Counter(list(nx.get_node_attributes(country.cg, 'freq').values()))
+
+        # standard deviation
         std = np.std(list(frequencies.values()))
+
+        # coefficient of variation
+        cv = std / np.mean(list(frequencies.values()))
+
+        # amount of frequencies
         amt = len(list(frequencies.keys()))
 
         print("country name: " + country.countryName)
         print("algorithm type: " + country.algorithmType)
         print("amount of frequencies: " + str(amt))
         print("standard deviation: " + str(std))
+        print("coefficient of variation: " + str(cv))
         print("")
