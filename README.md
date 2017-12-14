@@ -31,44 +31,77 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+To run our algorithms the following packages are being used, and thus are required in order to run our algorithms.
 
 ```
 Python 3
 NetworkX
 Matplotlib
+pandas
+numpy
 ```
-
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
-
-
-### And coding style tests
-
-Explain what these tests test and why
+In order to run the algorithms various elements from the main.py file have to be commented or uncommented. 
+Here we take Ukraine as an example. 
 
 ```
-Give an example
+# ----- COUNTRY = UKRAINE -----
+UA = country("Ukraine", "csv-borders/UkraineCompleteDataset.csv")
+Ukraine Algorithm Parameters
+UAgreedyAlphabetical = country("Ukraine", "csv-borders/UkraineCompleteDataset.csv")
+UAgreedyDegree = country("Ukraine", "csv-borders/UkraineCompleteDataset.csv")
+UADSatur = country("Ukraine", "csv-borders/UkraineCompleteDataset.csv")
+UAbacktracking = country("Ukraine", "csv-borders/UkraineCompleteDataset.csv")
+
+# Ukraine Algorithms:
+greedy(UAgreedyAlphabetical, "alphabetical", True)
+greedy(UAgreedyDegree, "degree")
+DSatur(UADSatur)
+backtracking(UAbacktracking, 4)
+
+# Ukraine Distribution Graph:
+visualisation.distribution([UAgreedyAlphabetical, UAgreedyDegree, UADSatur, UAbacktracking])
+
+# Ukraine Basic Information:
+visualisation.basicInformation(UAgreedyAlphabetical)
+visualisation.basicInformation(UAgreedyDegree)
+visualisation.basicInformation(UADSatur)
+visualisation.basicInformation(UAbacktracking)
+
+# Ukraine Graph Visualisations:
+visualisation.visualisation(UAgreedyAlphabetical)
+visualisation.visualisation(UAgreedyDegree)
+visualisation.visualisation(UADSatur)
+visualisation.visualisation(UAbacktracking)
+
+# Ukraine costscheme
+UADSatur.getLowestCost(costScheme1)
+UADSatur.getLowestCost(costScheme2)
+UADSatur.getLowestCost(costScheme3)
+UADSatur.getLowestCost(costScheme4)
 ```
+The example above shows every action that can be performed for the country of ukraine. 
+To use a specific algorithm, the other algorithms can be commented as the following example where only
+the DStatur algorithm will be run: 
+```
+# Ukraine Algorithms:
+# greedy(UAgreedyAlphabetical, "alphabetical", True)
+# greedy(UAgreedyDegree, "degree")
+DSatur(UADSatur)
+# backtracking(UAbacktracking, 4)
+```
+
+The same principle goes for all the other algorithms. 
+Simply make sure that what is to be run should be uncommented and what should be ignored
+should be commented.
+
+
+### Results
+
+To see the results of all the algorithms, check the readme of the results folder. Here various tables and
+images can be seen showing and explaining the results. 
 
 
 ## Authors
