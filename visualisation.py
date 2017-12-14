@@ -39,12 +39,6 @@ class visualisation:
             # add list to data dictionary for the right column
             data[c.algorithmType] = freqCounts2
 
-            print("")
-            print("")
-            print(freqCounts)
-            print("")
-            print("")
-
         df = pd.DataFrame(data=data, index=index, columns=columns)
 
         ax = df.plot.bar()
