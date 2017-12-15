@@ -100,9 +100,22 @@ DSatur(UADSatur)
 # backtracking(UAbacktracking, 4)
 ```
 
+
 The same principle goes for all the other algorithms. 
 Simply make sure that what is to be run should be uncommented and what should be ignored
 should be commented.
+
+
+
+For the Advanced part you can uncomment the following example. 
+The first example reduces the price by 1 Dollar everytime a Frequency type is used. 
+And the second example reduces the price by 2 Dollar everytime a Frequency type is used.
+We have also experimented by using a custom cost scheme in this example:
+```
+# RUDSatur.getLowestCost(customCostScheme,1)
+# RUDSatur.getLowestCost(customCostScheme,2)
+```
+
 
 
 ### Results
