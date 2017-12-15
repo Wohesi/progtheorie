@@ -28,6 +28,11 @@ E | 37 | 36 | 36 | 41
 F | 39 | 37 | 56 | 43
 G | 41 | 38 | 57 | 58
 
+## Advanced
+
+Design a cost scheme that is variable in costs with
+#the numbers of frequencies of a type placed. For example: a transmitter is 1 unit cheaper, every time you put it. Or 10% cheaper.
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
