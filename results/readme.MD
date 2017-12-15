@@ -36,11 +36,10 @@ This folder contains various images of the results of our algorithms.
 
 
 ### Images of frequecy distrubtution
-HIER KOMT DE BARCHART
+![distribution](https://github.com/Wohesi/progtheorie/blob/master/results/ukraine_freq.png)
 
-HIER KOMT DE GRAPH
-
-### Explanation
+#### Example map
+![map](https://github.com/Wohesi/progtheorie/blob/master/results/ukraine_freq_DS.png)
 
 
 ## Results of Unites States of America
@@ -53,11 +52,10 @@ HIER KOMT DE GRAPH
 
 
 ### Images of frequecy distrubtution
-HIER KOMT DE BARCHART
+![distribution](https://github.com/Wohesi/progtheorie/blob/master/results/usa_freq.png)
 
-HIER KOMT DE GRAPH
-
-### Explanation
+#### Example map
+![map](https://github.com/Wohesi/progtheorie/blob/master/results/usa_freq_GD.png)
 
 
 ## Results of China
@@ -70,11 +68,10 @@ HIER KOMT DE GRAPH
 
 
 ### Images of frequecy distrubtution
-HIER KOMT DE BARCHART
+![distribution](https://github.com/Wohesi/progtheorie/blob/master/results/china_freq.png)
 
-HIER KOMT DE GRAPH
-
-### Explanation
+#### Example map
+![map](https://github.com/Wohesi/progtheorie/blob/master/results/china_freq_BT.png)
 
 
 ## Results of Russia
