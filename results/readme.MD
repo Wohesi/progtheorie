@@ -29,10 +29,10 @@ This folder contains various images of the results of our algorithms.
 ## Results of Ukraine
 | **Ukraine**   | Greedy Alphabetical | Greedy Degree | DSatur | Backtracking
 |---------------| :------------------:|:-------------:|:------:|------------:|
-| Cost Scheme 1 |    542              |   548         | 542    |
-| Cost Scheme 2 |    523              |   535         | 506    |
-| Cost Scheme 3 |    568              |   557         | 548    |
-| Cost Scheme 4 |    577              |   577         | 598    |
+| Cost Scheme 1 |    542              |   548         | 542    |  560
+| Cost Scheme 2 |    523              |   535         | 506    |  510
+| Cost Scheme 3 |    568              |   557         | 548    |  549
+| Cost Scheme 4 |    577              |   577         | 598    |  629
 
 
 ### Images of frequecy distrubtution
@@ -46,10 +46,10 @@ HIER KOMT DE GRAPH
 ## Results of Unites States of America
 |**USA**        | Greedy Alphabetical  | Greedy Degree    | DSatur  | Backtracking
 |---------------| :-------------------:|:----------------:|:-------:|------------:|
-| Cost Scheme 1 |    1936              |   1103           | 1050    |
-| Cost Scheme 2 |    1779              |   1036           | 967     |
-| Cost Scheme 3 |    1949              |   1118           | 1044    |
-| Cost Scheme 4 |    2177              |   1214           | 1179    |
+| Cost Scheme 1 |    1936              |   1103           | 1050    | 1085
+| Cost Scheme 2 |    1779              |   1036           | 967     | 983
+| Cost Scheme 3 |    1949              |   1118           | 1044    | 1099
+| Cost Scheme 4 |    2177              |   1214           | 1179    | 1234
 
 
 ### Images of frequecy distrubtution
@@ -63,10 +63,10 @@ HIER KOMT DE GRAPH
 ## Results of China
 | **China**     | Greedy Alphabetical | Greedy Degree | DSatur | Backtracking
 |---------------| :------------------:|:-------------:|:------:|------------:|
-| Cost Scheme 1 |    721              |   696         | 710    |
-| Cost Scheme 2 |    698              |   681         | 665    |
-| Cost Scheme 3 |    748              |   728         | 709    |
-| Cost Scheme 4 |    767              |  729          | 781    |
+| Cost Scheme 1 |    721              |   696         | 710    |  750
+| Cost Scheme 2 |    698              |   681         | 665    |  676
+| Cost Scheme 3 |    748              |   728         | 709    |  759
+| Cost Scheme 4 |    767              |  729          | 781    |  858
 
 
 ### Images of frequecy distrubtution
