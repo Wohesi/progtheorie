@@ -29,7 +29,7 @@ class country:
         self.cg.add_nodes_from(provinceNames, freq=None)
         self.cg.add_edges_from(provincePairs)
 
-    def getLowestCost(self, costScheme):
+    def getLowestCost(self, costScheme, advanced=0):
         '''
         Calculates the lowest cost for the given cost scheme. It takes into
         account all possible permutations of this scheme.
@@ -41,8 +41,8 @@ class country:
         permutations = list(itertools.permutations(costScheme))
 
         for c in permutations:
-            if self.calcCost(c) < lowestCost:
-                lowestCost = self.calcCost(c)
+            if self.calcCost(c, advanced) < lowestCost:
+                lowestCost = self.calcCost(c, advanced)
                 optimalScheme = c
 
 
@@ -54,14 +54,19 @@ class country:
 
         return lowestCost
 
-    def calcCost(self, costScheme):
+    def calcCost(self, costScheme, advanced):
         '''
         Calculates the cost of a single given cost scheme.
         Args:
             costScheme (list) : a list of integers
         '''
+
+
         cost = 0
         freqCounts = Counter(nx.get_node_attributes(self.cg, 'freq').values())
+
+        if(advanced != 0):
+            cost = self.advancedCostScheme(costScheme, freqCounts.keys(), advanced)
 
         for i,c in enumerate(costScheme):
             # the cost scheme has more frequencies than the country because
@@ -73,3 +78,15 @@ class country:
                 return cost
 
         return cost
+
+    def costRecursive(self,x,z,y):
+
+        if z == 0:
+            return 0
+        else:
+            return (x + self.costRecursive(x+y,z-1, y))
+
+    def advancedCostScheme(self,x,z,y):
+         # gives the the final price of the custom scheme
+         #after the advanced calculations
+         return sum([self.costRecursive(j[0],j[1], y) for j in list(zip(x,z))])
