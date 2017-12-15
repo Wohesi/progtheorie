@@ -1,6 +1,7 @@
 import networkx as nx
 import matplotlib.pyplot as pyplot
 import copy
+import time
 
 from algorithms import algorithm
 from dsatur import DSatur
@@ -17,76 +18,57 @@ class backtracking(algorithm):
         country:        The country you want to have a frequncy distribution of
         maxFreq:        the maximum amount of frequencies used
         '''
-        if(True):
-            DSatur(country)
-        else:
-            graph = country.cg
-            attrDict = nx.get_node_attributes(graph, 'freq')
-            nodeList = [ [x,                                         # name
-                         attrDict[x] ]                              # freq
-                         for x in attrDict.keys()]
+        graph = country.cg
+        attrDict = nx.get_node_attributes(graph, 'freq')
+        attrList = [[x, attrDict[x]] for x in attrDict.keys()]
 
-            print(self.backTrackColouring(graph, nodeList, 0, maxFreq))
+        self.backTrackColouring(graph, attrList, maxFreq)
+
+        country.algorithmType = "Backtracking"
+        print(country.countryName + " was sorted using the backtracking algorithm!")
+        print("graphCheck returns " + str(algorithm.graphCheck(graph)))
 
 
-    def backTrackColouring(self, graph, nodeList, n, maxFreq):
+    def backTrackColouring(self, graph, nodeList, maxFreq):
         '''
         backtracking algoritme
         parameters:
         graph:          the graph you want to colour, and to get algorithm functions.
         currentN:       the current node that is being checked.
         nodeList:       list of nodes that are checked.
-        maxFreq:        maximum amount of frequencies allowed in the graph.
+        maxFreq:        maximum amount of frequencies allowed in the graph. >=4
         '''
-        # If there are no interferences in the graph, return an empty list
-        if n > len(nodeList):
-            return nodeList
         if algorithm.graphCheck(graph):
-            return nodeList
+            return True
 
-        # Adds a frequency to the first node
-        if nodeList[0][1] == None:
-            nodeList[0][1] = 1
-            graph.node[nodeList[0][0]]['freq'] = 1
-        # if it already has a frequncy (backtracking) sets it to the next one
-        else:
-            nodeList[0][1] += 1
-            graph.node[nodeList[0][0]]['freq'] += 1
+        newList = copy.deepcopy(nodeList)
 
-        while not algorithm.neighborCheck(graph,nodeList[0][0]):
-            nodeList[0][1] += 1
-            graph.node[nodeList[0][0]]['freq'] += 1
+        while True:
 
-            if graph.node[nodeList[0][0]]['freq'] >= maxFreq:
-                nodeList[0][1] = None
-                graph.node[nodeList[0][0]]['freq'] = None
-
-                newNodeList = [nodeList[-1]] + nodeList[:-1]
-                # return [nodeList[0]] + self.backTrackColouring(graph,
-                #             newNodeList,
-                #             maxFreq)
-                nn = n + 1
-                return self.backTrackColouring(graph,
-                            newNodeList,
-                            nn,
-                            maxFreq)
+            ## UNCOMMENT THIS TO  WATCH THE MAGIC HAPPEN IN REAL TIME
+            ## SIT BACK AND ENJOY
+            # attrDict = nx.get_node_attributes(graph, 'freq')
+            # freqCounts = [k for
+            #                 k in
+            #                 attrDict.values()]
+            # print(freqCounts)
+            # print("")
+            # print("")
+            # time.sleep(0.1)
 
 
-        newNodeList = nodeList[1:] + [nodeList[0]]
-        # return [nodeList[0]] + self.backTrackColouring(graph,
-        #         newNodeList,
-        #         maxFreq)
+            if newList[0][1] == None:
+                newList[0][1] = 1
+                graph.node[newList[0][0]]['freq'] = 1
+            else:
+                newList[0][1] += 1
+                graph.node[newList[0][0]]['freq'] += 1
 
-        nn = n + 1
-        return self.backTrackColouring(graph,
-                    newNodeList,
-                    nn,
-                    maxFreq)
-
-# Geef een node een frequentie
-# Als twee nodes dezelfde frequentie hebben
-    # geef de huidige node een hogere frequentie
-    # Als deze nieuwe frequntie hoger is dan het maximaal toegestane frequrntie
-    # verander de frequentie van de vorige node
-    # Probeer opnieuw een frequentie toe te wijzen
-    # r e p e a t
+            if newList[0][1] <= maxFreq:
+                if algorithm.neighborCheck(graph, newList[0][0]):
+                    if self.backTrackColouring(graph, newList[1:], maxFreq):
+                        return True
+            else:
+                newList[0][1] = None
+                graph.node[newList[0][0]]['freq'] = None
+                return False
