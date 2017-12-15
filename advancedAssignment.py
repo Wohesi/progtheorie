@@ -1,5 +1,9 @@
+#ADVANCED SECTION
+#a cost scheme that is variable in costs with
+#the numbers of frequencies of a type placed.
+
 schemeCustom = [5, 8, 13, 20, 25, 32, 38]
-count = [4, 2, 3, 5]
+count = [4, 2, 3, 5] # MOET VERANDERD WORDEN MET DE freqDict
 
 
 def customCostPercentage(x,z):
@@ -28,7 +32,9 @@ def customCostOneDollar(x,z):
 
 def advancedCostScheme(strategyType):
 
-     cheapCost=[strategyType(j[0],j[1]) for j in list(zip(schemeCustom,count))]
+     # gives the the final price of the custom scheme
+     #after the advanced calculations
+     cheapCost=sum([strategyType(j[0],j[1]) for j in list(zip(schemeCustom,count))])
 
      if strategyType == customCostOneDollar:
          print ("Costs by making the price every iteration 1 Dollar cheaper: "
@@ -37,7 +43,6 @@ def advancedCostScheme(strategyType):
      if strategyType == customCostPercentage:
          print ("Costs by making the price every iteration 10 percent cheaper: "
          + str(cheapCost))
-
      return
 
 
