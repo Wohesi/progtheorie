@@ -4,6 +4,7 @@ sys.path.insert(0,'algorithms')
 from greedy import greedy
 from dsatur import DSatur
 from country import country
+from advancedAssignment import advancedCostScheme
 from backtracking import backtracking
 from visualisation import visualisation
 
@@ -12,7 +13,7 @@ costScheme1 = [12, 26, 27, 30, 37, 39, 41]
 costScheme2 = [19, 20, 21, 23, 36, 37, 38]
 costScheme3 = [16, 17, 31, 33, 36, 56, 57]
 costScheme4 = [3,  34, 36, 39, 41, 43, 58]
-# CUSTOM COST SHCEME AS DEFINED BY US
+# CUSTOM COST SCHEME AS DEFINED BY US
 customCostScheme = [5, 8, 13, 20, 25, 32, 38]
 
 
@@ -46,15 +47,20 @@ visualisation.visualisation(UADSatur)
 visualisation.visualisation(UAbacktracking)
 
 # Ukraine costscheme
-UAbacktracking.getLowestCost(costScheme1, 0.9, "Percentage")
-UAbacktracking.getLowestCost(costScheme1, 1, "Fixed")
 UAbacktracking.getLowestCost(costScheme1)
 UAbacktracking.getLowestCost(costScheme2)
 UAbacktracking.getLowestCost(costScheme3)
 UAbacktracking.getLowestCost(costScheme4)
 
-
-
+# test of the Advanced advanced Assignment
+# by using a greedy algorithm which is alphabetical sorted
+# and experimented with a custom cost scheme
+greedy(UA, "alphabetical", True)
+print ("advanced Assignment by making the price every iteration 10 percent cheaper: ")
++ advancedCostScheme(UA,customCostScheme,"customCostPercentage")
+print ("advanced Assignment by making the price every iteration 1 Dollar cheaper: ")
++ advancedCostScheme(UA,customCostScheme,"customCostOneDollar")
+UA.getLowestCost(customCostScheme)
 
 # # ----- COUNTRY = United States of America -----
 # USA = country("USA", "csv-borders/USACompleteDataset.csv")
