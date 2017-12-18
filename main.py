@@ -1,7 +1,5 @@
 import sys
 sys.path.insert(0,'algorithms')
-sys.path.insert(0,'bin')
-
 
 from greedy import greedy
 from dsatur import DSatur
@@ -9,16 +7,18 @@ from country import country
 from backtracking import backtracking
 from visualisation import visualisation
 
+# COST SCHEMES AS DEFINED BY THE CASE
 costScheme1 = [12, 26, 27, 30, 37, 39, 41]
 costScheme2 = [19, 20, 21, 23, 36, 37, 38]
 costScheme3 = [16, 17, 31, 33, 36, 56, 57]
 costScheme4 = [3,  34, 36, 39, 41, 43, 58]
+# CUSTOM COST SHCEME AS DEFINED BY US
 customCostScheme = [5, 8, 13, 20, 25, 32, 38]
 
 
 # # ----- COUNTRY = UKRAINE -----
 # UA = country("Ukraine", "csv-borders/UkraineCompleteDataset.csv")
-# # # Ukraine Algorithm Parameters
+# # Ukraine Algorithm Parameters
 # UAgreedyAlphabetical = country("Ukraine", "csv-borders/UkraineCompleteDataset.csv")
 # UAgreedyDegree = country("Ukraine", "csv-borders/UkraineCompleteDataset.csv")
 # UADSatur = country("Ukraine", "csv-borders/UkraineCompleteDataset.csv")
@@ -31,7 +31,7 @@ customCostScheme = [5, 8, 13, 20, 25, 32, 38]
 # backtracking(UAbacktracking, 4)
 #
 # # Ukraine Distribution Graph:
-# visualisation.distribution([UAgreedyAlphabetical, UAgreedyDegree, UADSatur, UAbacktracking])
+# # visualisation.distribution([UAgreedyAlphabetical, UAgreedyDegree, UADSatur, UAbacktracking])
 #
 # # Ukraine Basic Information:
 # visualisation.basicInformation(UAgreedyAlphabetical)
@@ -79,9 +79,9 @@ customCostScheme = [5, 8, 13, 20, 25, 32, 38]
 #
 # # USA Graph Visualisations:
 # visualisation.visualisation(USAgreedyAlphabetical)
-# visualisation.visualisation(USAgreedyDegree)
-# visualisation.visualisation(USADSatur)
-# visualisation.visualisation(USAbacktracking)
+# # visualisation.visualisation(USAgreedyDegree)
+# # visualisation.visualisation(USADSatur)
+# # visualisation.visualisation(USAbacktracking)
 #
 # # USA costscheme
 # USAbacktracking.getLowestCost(costScheme1)
@@ -116,15 +116,15 @@ customCostScheme = [5, 8, 13, 20, 25, 32, 38]
 #
 # # China Graph Visualisations:
 # visualisation.visualisation(CNgreedyAlphabetical)
-# visualisation.visualisation(CNgreedyDegree)
-# visualisation.visualisation(CNDSatur)
-# visualisation.visualisation(CNbacktracking)
+# # visualisation.visualisation(CNgreedyDegree)
+# # visualisation.visualisation(CNDSatur)
+# # visualisation.visualisation(CNbacktracking)
 #
 # # China Costschemes
-# CNDSatur.getLowestCost(costScheme1)
-# CNDSatur.getLowestCost(costScheme2)
-# CNDSatur.getLowestCost(costScheme3)
-# CNDSatur.getLowestCost(costScheme4)
+# CNbacktracking.getLowestCost(costScheme1)
+# CNbacktracking.getLowestCost(costScheme2)
+# CNbacktracking.getLowestCost(costScheme3)
+# CNbacktracking.getLowestCost(costScheme4)
 
 
 
@@ -153,9 +153,9 @@ visualisation.basicInformation(RUbacktracking)
 
 # Russia Graph Visualisations:
 visualisation.visualisation(RUgreedyAlphabetical)
-visualisation.visualisation(RUgreedyDegree)
-visualisation.visualisation(RUDSatur)
-visualisation.visualisation(RUbacktracking)
+# visualisation.visualisation(RUgreedyDegree)
+# visualisation.visualisation(RUDSatur)
+# visualisation.visualisation(RUbacktracking)
 
 # Russia costscheme
 RUDSatur.getLowestCost(costScheme1)
