@@ -8,11 +8,9 @@ import networkx as nx
 
 
 def customCostPercentage(x,z):
-    ''' Calculates the cost of the given cost scheme.
-        And reduces the price by 10 percent every time a
-        Frequency type is used.
+    ''' Reduces the price by 10 percent every time a Frequency type is used.
     Args:
-        costScheme (list) : a list of integers'''
+        x (integer) : integer with the frequency price'''
     if z == 0:
         return 0
     else:
@@ -20,11 +18,11 @@ def customCostPercentage(x,z):
 
 
 def customCostOneDollar(x,z):
-    ''' Calculates the cost of the given cost scheme.
-        And reduces the price by 1 Dollar a
-        Frequency type is used.
+    '''
+    reduces the price by 1 Dollar a Frequency type is used.
     Args:
-        costScheme (list) : a list of integers'''
+        x (integer) : integer with the frequency price
+    '''
     if z == 0:
         return 0
     else:
@@ -33,8 +31,13 @@ def customCostOneDollar(x,z):
 
 
 def advancedCostScheme(country,costScheme,strat):
+    '''
+    Calculates the cost of the given cost scheme.
+    Args:
+        costScheme (list) : a list of integers
+    '''
 
-    count = Counter(nx.get_node_attributes(country.cg, 'freq').values()) # MOET VERANDERD WORDEN MET DE freqDict
+    count = Counter(nx.get_node_attributes(country.cg, 'freq').values())
     freqValues = list(count.values())
 
 
