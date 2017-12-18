@@ -10,6 +10,12 @@ class country:
     algorithmType = None
 
     def __init__(self, name, csvfile):
+        '''
+        Args:
+            name (String)     : a country name
+            csvfile (String)  : the location of the neighbor csv file
+                                (located in the csv-borders folder)
+        '''
         self.countryName = name
 
         with open(csvfile, encoding="utf8") as csvfile:
@@ -22,7 +28,7 @@ class country:
         self.cg.add_nodes_from(provinceNames, freq=None)
         self.cg.add_edges_from(provincePairs)
 
-    def getLowestCost(self, costScheme, advanced=0, advancedType="Percentage"):
+    def getLowestCost(self, costScheme):
         '''
         Calculates the lowest cost for the given cost scheme. It takes into
         account all possible permutations of this scheme.
@@ -31,11 +37,14 @@ class country:
         '''
         lowestCost = 999999999999999999999999
         optimalScheme = []
+
+        # each permutation of the cost scheme has to be tried to make sure
+        # we select the best assignment of costs to frequencies
         permutations = list(itertools.permutations(costScheme))
 
         for c in permutations:
-            if self.calcCost(c, advanced, advancedType) < lowestCost:
-                lowestCost = self.calcCost(c, advanced, advancedType)
+            if self.calcCost(c) < lowestCost:
+                lowestCost = self.calcCost(c)
                 optimalScheme = c
 
 
@@ -47,20 +56,14 @@ class country:
 
         return lowestCost
 
-    def calcCost(self, costScheme, advanced, advancedType):
+    def calcCost(self, costScheme):
         '''
         Calculates the cost of a single given cost scheme.
         Args:
-            costScheme (list) : a list of integers
+            costScheme (list) : a list of integers signifying the costs
         '''
-
-
         cost = 0
         freqCounts = Counter(nx.get_node_attributes(self.cg, 'freq').values())
-
-        if(advanced != 0):
-            print(freqCounts.values())
-            cost = self.advancedCostScheme(costScheme, freqCounts.values(), advanced, advancedType)
 
         for i,c in enumerate(costScheme):
             # the cost scheme has more frequencies than the country because
@@ -72,31 +75,3 @@ class country:
                 return cost
 
         return cost
-
-    def costRecursivePercentage(self,cost,freq,decreaseAmount):
-        '''
-        Calculates the cost recursively for frequencies
-        '''
-        if freq == 0:
-            return 0
-        else:
-            return (cost + self.costRecursivePercentage(cost*decreaseAmount,freq-1, decreaseAmount))
-
-    def costRecursiveFixedAmount(self,cost,freq,decreaseAmount):
-        '''
-        Calculates the cost recursively for frequencies
-        '''
-        if freq == 0:
-            return 0
-        else:
-            return (cost + self.costRecursiveFixedAmount(cost-decreaseAmount,freq-1, decreaseAmount))
-
-    def advancedCostScheme(self,costScheme,freqCounts,decreaseAmount, advancedType):
-        '''
-        Calculates the cost for a country given a single cost scheme according
-        to the rules of the advanced assignment.
-        '''
-        if advancedType=="Percentage":
-            return sum([self.costRecursivePercentage(j[0],j[1], decreaseAmount) for j in list(zip(costScheme,freqCounts))])
-        if advancedType=="Fixed":
-            return sum([self.costRecursiveFixedAmount(j[0],j[1], decreaseAmount) for j in list(zip(costScheme,freqCounts))])
