@@ -9,11 +9,14 @@ from collections import Counter
 class visualisation:
 
     def distribution(countryList):
-
-        # column = algorithm type
-        # row = frequency
-        # data = amount
-
+        '''
+        Produces a multiple bar chart containing the frequency amounts for
+        the different countries in the list.
+        Args:
+            countryList (list of country objects) : A list containing different
+                                                    countries to be included
+                                                    in the graph.
+        '''
         # the maximum frequency for the chart
         N = 7
 
@@ -33,8 +36,8 @@ class visualisation:
             freqCounts2 = [x[1] for x in freqCounts]
 
             # pad the list with extra 0's for frequencies that don't exist
-            if len(freqCounts2) < N:
-                freqCounts2.extend([0] * (N - len(freqCounts2))) # extend the missing amount
+            if len(freqCounts2) < N: # extend the missing amount
+                freqCounts2.extend([0] * (N - len(freqCounts2)))
 
             # add list to data dictionary for the right column
             data[c.algorithmType] = freqCounts2
@@ -50,7 +53,11 @@ class visualisation:
 
 
     def visualisation(country):
-
+        '''
+        Produces a coloured in network of the given country.
+        Args:
+            country (country) : a country object
+        '''
         # the available colours that can be used to colour in the graph
         c = {1: 'royalblue', 2: 'orange', 3: 'limegreen', 4: 'hotpink',
              5: 'red', 6: 'cyan', 7: 'yellow'}
@@ -81,6 +88,12 @@ class visualisation:
         plt.show()
 
     def basicInformation(country):
+        '''
+        Prints some basic information about the frequency distribution of the
+        given country.
+        Args:
+            country (country) : a country object
+        '''
         frequencies = Counter(list(nx.get_node_attributes(country.cg, 'freq').values()))
 
         # standard deviation
