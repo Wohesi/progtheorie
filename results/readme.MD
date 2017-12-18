@@ -84,9 +84,12 @@ This folder contains various images of the results of our algorithms.
 | Cost Scheme 4 |    2177             |   2078        | 2159   |
 
 
-### Images of frequency distrutution
-TBD
+### Images of frequency distribution
+![distribution](https://github.com/Wohesi/progtheorie/blob/master/results/russia_freq.png)
 
-TBD
+![map](https://github.com/Wohesi/progtheorie/blob/master/results/russia_freq_GA.png)
 
 ### Explanation
+Cost scheme 2 seems to be the cheapest scheme overall. 
+DSatur is best at minimising the amount of frequencies used (apart from backtracking).
+DSatur seems to give the most evenly distributed results.
