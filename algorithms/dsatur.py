@@ -15,9 +15,9 @@ class DSatur(algorithm):
         '''
         graph = country.cg
         attrDict = nx.get_node_attributes(graph, 'freq')
-        attrList = [[   k,
-                        attrDict[k],
-                        self.getSaturation(graph, k),
+        attrList = [[   k,                                      # node
+                        attrDict[k],                            # frequency
+                        self.getSaturation(graph, k),           # saturation
                         graph.degree(k)] for k in attrDict]
         sortedList = sorted(attrList, key = lambda x: (x[2], x[3], x[0]), reverse=True)
         # sort by saturation, then by degree in descending order
@@ -64,6 +64,7 @@ class DSatur(algorithm):
                             n[1],
                             self.getSaturation(graph, n[0]),
                             n[3]]  for n in nodeList[1:]]
+        # Sort the nodelist first on saturation, then on degree and last on alphabet
         newNodeListSorted = sorted(newNodeList, key = lambda x: (x[2], x[3], x[0]), reverse=True)
 
         return newDoneList + self.recursiveColor(graph, newNodeListSorted, newDoneList)
