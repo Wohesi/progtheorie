@@ -84,7 +84,7 @@ This folder contains various images of the results of our algorithms.
 | Cost Scheme 4 |    2177             |   2078        | 2159   |
 
 
-### Images of frequecy distrubtution
+### Images of frequency distrutution
 TBD
 
 TBD

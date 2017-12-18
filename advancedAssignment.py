@@ -10,7 +10,9 @@ def customCostPercentage(x,z):
     '''
     Reduces the price by 10 percent every time a Frequency type is used.
     Args:
-        x (integer) : integer with the frequency price'''
+        x (integer) : integer with the frequency price
+        z (integer) : integer with how many times a frequency is used
+    '''
     if z == 0:
         return 0
     else:
@@ -22,6 +24,7 @@ def customCostOneDollar(x,z):
     reduces the price by 1 Dollar a Frequency type is used.
     Args:
         x (integer) : integer with the frequency price
+        z (integer) : integer with how many times a frequency is used
     '''
     if z == 0:
         return 0
@@ -29,17 +32,16 @@ def customCostOneDollar(x,z):
         return (x + customCostOneDollar(x-1,z-1))
 
 
-
 def advancedCostScheme(country,costScheme,strat):
     '''
     Calculates the cost of the given cost scheme.
     Args:
         costScheme (list) : a list of integers
+        strat (string) : the strategy type that is used
     '''
 
     count = Counter(nx.get_node_attributes(country.cg, 'freq').values())
     freqValues = list(count.values())
-
 
     strategyType = None
 
