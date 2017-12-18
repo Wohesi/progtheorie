@@ -45,8 +45,7 @@ class backtracking(algorithm):
 
         while True:
 
-            ## UNCOMMENT THIS TO  WATCH THE MAGIC HAPPEN IN REAL TIME
-            ## SIT BACK AND ENJOY
+            ## UNCOMMENT THIS TO  WATCH THE ALGORITHM HAPPEN IN REAL TIME
             # attrDict = nx.get_node_attributes(graph, 'freq')
             # freqCounts = [k for
             #                 k in
@@ -56,18 +55,22 @@ class backtracking(algorithm):
             # print("")
             # time.sleep(0.1)
 
-
+            # Give a node a frequency if it has none
             if newList[0][1] == None:
                 newList[0][1] = 1
                 graph.node[newList[0][0]]['freq'] = 1
+            # If it has a frequncy give it the next frequency
             else:
                 newList[0][1] += 1
                 graph.node[newList[0][0]]['freq'] += 1
 
+            # If the next frequency is higher than the maximum frequency
+            # re-assign the previous node
             if newList[0][1] <= maxFreq:
                 if algorithm.neighborCheck(graph, newList[0][0]):
                     if self.backTrackColouring(graph, newList[1:], maxFreq):
                         return True
+            # If the next frequency is allowed, continue as intended. 
             else:
                 newList[0][1] = None
                 graph.node[newList[0][0]]['freq'] = None

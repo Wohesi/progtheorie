@@ -1,6 +1,5 @@
-#ADVANCED SECTION
-#a cost scheme that is variable in costs with
-#the numbers of frequencies of a type placed.
+#ADVANCED  assignmentSECTION
+
 from collections import Counter
 from country import country
 from backtracking import backtracking
@@ -8,7 +7,8 @@ import networkx as nx
 
 
 def customCostPercentage(x,z):
-    ''' Reduces the price by 10 percent every time a Frequency type is used.
+    '''
+    Reduces the price by 10 percent every time a Frequency type is used.
     Args:
         x (integer) : integer with the frequency price'''
     if z == 0:
