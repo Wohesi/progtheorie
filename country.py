@@ -1,14 +1,7 @@
 import csv
 import networkx as nx
-import matplotlib.pyplot as plt
-import numpy as np
-import sys
 import itertools
-sys.path.insert(0,'algorithms')
-
 from collections import Counter
-#from algorithms import greedy
-import greedy
 
 class country:
 
@@ -29,7 +22,7 @@ class country:
         self.cg.add_nodes_from(provinceNames, freq=None)
         self.cg.add_edges_from(provincePairs)
 
-    def getLowestCost(self, costScheme, advanced=0):
+    def getLowestCost(self, costScheme, advanced=0, advancedType="Percentage"):
         '''
         Calculates the lowest cost for the given cost scheme. It takes into
         account all possible permutations of this scheme.
@@ -41,8 +34,8 @@ class country:
         permutations = list(itertools.permutations(costScheme))
 
         for c in permutations:
-            if self.calcCost(c, advanced) < lowestCost:
-                lowestCost = self.calcCost(c, advanced)
+            if self.calcCost(c, advanced, advancedType) < lowestCost:
+                lowestCost = self.calcCost(c, advanced, advancedType)
                 optimalScheme = c
 
 
@@ -54,7 +47,7 @@ class country:
 
         return lowestCost
 
-    def calcCost(self, costScheme, advanced):
+    def calcCost(self, costScheme, advanced, advancedType):
         '''
         Calculates the cost of a single given cost scheme.
         Args:
@@ -66,7 +59,8 @@ class country:
         freqCounts = Counter(nx.get_node_attributes(self.cg, 'freq').values())
 
         if(advanced != 0):
-            cost = self.advancedCostScheme(costScheme, freqCounts.keys(), advanced)
+            print(freqCounts.values())
+            cost = self.advancedCostScheme(costScheme, freqCounts.values(), advanced, advancedType)
 
         for i,c in enumerate(costScheme):
             # the cost scheme has more frequencies than the country because
@@ -79,14 +73,30 @@ class country:
 
         return cost
 
-    def costRecursive(self,x,z,y):
-
-        if z == 0:
+    def costRecursivePercentage(self,cost,freq,decreaseAmount):
+        '''
+        Calculates the cost recursively for frequencies
+        '''
+        if freq == 0:
             return 0
         else:
-            return (x + self.costRecursive(x+y,z-1, y))
+            return (cost + self.costRecursivePercentage(cost*decreaseAmount,freq-1, decreaseAmount))
 
-    def advancedCostScheme(self,x,z,y):
-         # gives the the final price of the custom scheme
-         #after the advanced calculations
-         return sum([self.costRecursive(j[0],j[1], y) for j in list(zip(x,z))])
+    def costRecursiveFixedAmount(self,cost,freq,decreaseAmount):
+        '''
+        Calculates the cost recursively for frequencies
+        '''
+        if freq == 0:
+            return 0
+        else:
+            return (cost + self.costRecursiveFixedAmount(cost-decreaseAmount,freq-1, decreaseAmount))
+
+    def advancedCostScheme(self,costScheme,freqCounts,decreaseAmount, advancedType):
+        '''
+        Calculates the cost for a country given a single cost scheme according
+        to the rules of the advanced assignment.
+        '''
+        if advancedType=="Percentage":
+            return sum([self.costRecursivePercentage(j[0],j[1], decreaseAmount) for j in list(zip(costScheme,freqCounts))])
+        if advancedType=="Fixed":
+            return sum([self.costRecursiveFixedAmount(j[0],j[1], decreaseAmount) for j in list(zip(costScheme,freqCounts))])
