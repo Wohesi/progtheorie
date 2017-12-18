@@ -1,4 +1,4 @@
-#ADVANCED  assignmentSECTION
+#ADVANCED ASSIGNMENT SECTION
 
 from collections import Counter
 from country import country
